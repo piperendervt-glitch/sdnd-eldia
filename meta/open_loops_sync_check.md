@@ -54,6 +54,15 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-006「周波数解析」Canon確定チェック / 実施日: 2026-03-01 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（LOOP-004: EP-006で初出。open_loops.md に既存エントリあり。Last Touched を EP-006 に更新済み）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-006で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-004: Last Touched → EP-006 に更新済み。Progress Log に EP-006 初出内容を追記済み。LOOP-003: Last Touched → EP-006 に更新済み。Progress Log に EP-006 進展内容を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-004・LOOP-006・LOOP-007 の6件アクティブ表示）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 7件、quick_ref: LOOP-001・LOOP-002・LOOP-003・LOOP-004・LOOP-006・LOOP-007 の6件アクティブ表示。LOOP-005 は EP-007 開始前のため表示対象外。総数一致）
+
+---
+
 ## 同期フロー
 
 ```
