@@ -1,0 +1,1 @@
+timestamp,task_id,phase,ep,elapsed_seconds,branch,head_commit,story_chars,specs_chars_total,canon_chars_total,qa_lines,open_loops_count,active_canon_count,note
