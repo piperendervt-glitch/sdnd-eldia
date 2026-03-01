@@ -1,0 +1,24 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Environment / Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Claude Code local state
+.claude/projects/
+
+# Temp
+*.tmp
+plan.md
