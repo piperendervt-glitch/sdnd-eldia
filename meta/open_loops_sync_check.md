@@ -36,6 +36,15 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-004「最初のバグ」Canon確定チェック / 実施日: 2026-03-01 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（LOOP-003: EP-004で初出、open_loops.md に既存・Last Touched を EP-004 に更新済み。LOOP-007: EP-004で初出、open_loops.md に既存・Last Touched を EP-004 に更新済み）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-004で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-003: Last Touched → EP-004 に更新済み。LOOP-007: Last Touched → EP-004 に更新済み。LOOP-006: Last Touched → EP-004 に更新済み。Progress Log 各ループに追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-006・LOOP-007 の5件アクティブ表示）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 7件、quick_ref: LOOP-001・LOOP-002・LOOP-003・LOOP-006・LOOP-007 の5件アクティブ表示。総数一致）
+
+---
+
 ## 同期フロー
 
 ```
