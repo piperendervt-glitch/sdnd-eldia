@@ -1,5 +1,5 @@
 # Canon Quick Reference
-<!-- 最終更新: EP-008 Canon確定 / 2026-03-01 -->
+<!-- 最終更新: EP-008 Canon確定 / 2026-03-01. Arc 2 準備完了: LOOP-008〜010 を open_loops.md に登録済み (2026-03-02) -->
 
 ## 現在のキャラクター状態
 | ID | Name | HP | MP | Location | Status |
