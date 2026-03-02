@@ -99,6 +99,16 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-011「Eランクの日常」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-011で新規 ACTIVE ループなし。LOOP-003・LOOP-010は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-011で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-003: Last Touched → EP-011 に更新済み。Progress Log に EP-011 進展内容を追記済み。LOOP-010: Last Touched → EP-011 に更新済み。Progress Log に EP-011 進展内容を追記済み。EP-012進展予定の文言をW-001対応で更新済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-004・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-010 の9件アクティブ表示。LOOP-009は EP-015で正式配置予定のため表示対象外。EP-011でアクティブループ数に変更なし）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件、quick_ref: 9件アクティブ表示。LOOP-009は事前登録・未配置のため表示対象外。整合）
+- [x] activeウィンドウ管理（W-002対応）: canon-004・canon-005はEP-009・EP-010 Canon確定時点でarchiveに移動済み（active内はスタブファイルのみ）。EP-011追加後の実質activeは canon-006〜011 の6件。管理基準（直近5話、6件以上で最古を archive 移動）に基づき現状は許容範囲内（activeスタブ含む件数が多い場合は次回Canon確定時に整理を検討）。
+
+---
+
 ## 同期フロー
 
 ```
