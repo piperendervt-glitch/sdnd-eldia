@@ -130,6 +130,18 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-014「帝都への召喚」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-014で新規 ACTIVE ループなし。LOOP-010・LOOP-001は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-014で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-010: Last Touched EP-013 → EP-014 に更新済み。Progress Log にベルント別便・フィン同行決定の進展内容を追記済み。LOOP-001: Last Touched EP-008 → EP-014 に更新済み。Progress Log に帝都到着の布石進展を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-010 の8件アクティブ表示。LOOP-004 resolved・LOOP-009 未配置のため表示対象外。EP-014でアクティブループ数に変更なし）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004はresolved）、quick_ref: 8件アクティブ表示。LOOP-004 resolved・LOOP-009 未配置（Opened: EP-015予定）のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-014追加（canon-014）で実質active件数が7件（canon-008〜014）となるため、最古のcanon-008をarchiveに移動。canon/archive/canon-008.md を作成し、canon/active/canon-008.md をスタブに置き換え済み。移動後のactive実質件数: canon-009〜014 の6件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み
+- [x] LOOP-009の扱い確認（QA Warn W-002対応）: LOOP-009は「Opened: EP-015（予定）/ Last Touched: —」を維持。EP-014での帝都到着は布石であるが、ループ自体の開始はEP-015であるため open_loops.md への Last Touched 更新は行わない。EP-015のCanon確定後に「Opened: EP-015 / Last Touched: EP-015」に更新する運用を採用
+- [x] 同時アクティブ数確認: EP-014でアクティブ数の変動なし（8本。LOOP-009は未配置・LOOP-004はresolved。規定の上限10本以下）
+
+---
+
 ## 同期フロー
 
 ```
