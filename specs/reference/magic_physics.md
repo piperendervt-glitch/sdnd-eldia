@@ -105,6 +105,41 @@
 
 ---
 
+## リンデン地域バグの定義（EP-012 事前設計）
+
+### 根本原因
+
+EP-008 のバグ修正（逆位相注入によるアクティブ・ノイズキャンセリング）の副作用（INV-D02）で、リンデン地域のマナ経路テーブルが破損した。マナの属性別配送ルートを管理するシステム層（SF真相: ルーティングテーブル）が部分的に壊れ、各地で異なる症状として発現している。
+
+### 症状マップ
+
+| 場所 | 症状 | メカニズム |
+|------|------|----------|
+| 魔法塾付近 | ハーブ枯れ（EP-009 ハンナ証言、EP-010 直接確認） | マナ供給経路が細り、環境マナに依存する植物が餓死 |
+| 魔法塾内 | 火・土属性の出力低下（EP-010 フィン報告） | 該当属性チャネルが劣化し、術者の魔法発動に対するレスポンスが低下 |
+| クロッカ丘陵南斜面 | 属性境界バグ: 土・水の遷移帯崩壊（EP-011 確定） | 境界フィルタが機能不全。両属性のマナを植物が過剰吸収し結晶化 |
+
+### EP-012 修正設計
+
+- **修正対象**: 魔法塾近くのマナ経路テーブル破損（配送ルートの部分再構成）
+- **MP消費見込み**: 解析 20MP + 修正 50MP = 合計 70MP（MP 80/120 開始 → 10/120 で極度消耗）
+- **副作用（INV-D02）**: 修正でマナの流れが回復した結果、町の南側・農地方面でマナの過剰流入が発生。農作物の異常成長や夜間に地面が淡く光る現象。目に見える規模の副作用を町の人々が目撃する → EP-014 の召喚への因果
+- **修正の限界**: アルの権限（authority）では完全修復は不可能。部分修復のみ
+
+### デバッグ出力フォーマット（EP-012 用）
+
+```
+[SCAN: regional_mana_routing]
+routing_table: CORRUPTED (entries: 47, invalid: 12)
+cascade_origin: external_patch (ref: forest_resonance_fix)
+attribute_channels: fire[degraded], earth[degraded], water[overflow], wind[nominal]
+note: partial_repair possible — full restoration requires elevated authority
+```
+
+EP-004（NullRef・overflow）、EP-008（七重フィードバックループ）、EP-011（boundary_violation: attribute_transition_error）とは異なる種類のバグとして、routing_table タグを使用。「elevated authority」は EP-011 の「insufficient authority」からの連続性を持ち、LOOP-001・LOOP-007 への伏線としても機能する。
+
+---
+
 ## 魔法の分類（用途別）
 
 | 分類 | 説明 | 例 |
