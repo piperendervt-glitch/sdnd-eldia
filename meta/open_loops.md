@@ -1,6 +1,6 @@
 # Open Loops
 
-<!-- 最終更新: 2026-03-03 / EP-025 Canon確定: LOOP-007 Last Touched EP-023→EP-025に更新。Progress Log追記。 -->
+<!-- 最終更新: 2026-03-03 / EP-026 Canon確定: LOOP-009 resolved。LOOP-003/005/007 Last Touched更新・Progress Log追記。 -->
 <!-- canon/quick_ref.md のアクティブループ欄と常に同期すること -->
 <!-- LOOP-008〜010: Arc 2 開始準備として追加済み (2026-03-02) -->
 
@@ -16,7 +16,7 @@
 | LOOP-006 | resolved | character | MEDIUM | EP-002 | EP-017 | ドルクの古傷/過去 |
 | LOOP-007 | open | mystery | HIGH | EP-004 | EP-029 | デバッグ出力がコードに見える理由（EP-025: 変数名命名規則の一貫性観察から「誰かが書いた」確信が「おそらく」へ前進） |
 | LOOP-008 | open | mystery | MEDIUM | EP-009 | EP-027 | 魔法発動がブートシーケンスに似ている（EP-009配置済み） |
-| LOOP-009 | open | world | MEDIUM | EP-015 | EP-026 | 帝都地下の封印区画（EP-024: 2回目入室・depth+1探索。BOUNDARY_LEAK・collapse_epoch・[REDACTED]ACCESS_DENIED確認） |
+| LOOP-009 | resolved | world | MEDIUM | EP-015 | EP-026 | 帝都地下の封印区画（EP-026: resolved。foundation_layer exposure node・rupture point確認。封印区画の正体が確立） |
 | LOOP-010 | resolved | character | MEDIUM | EP-010（確定） | EP-022 | フィンの監視任務（EP-022: フィンがアルに監視任務の全容を告白し叔父との決別を宣言。完全回収） |
 
 ---
@@ -59,7 +59,7 @@
 - **Priority**: HIGH
 - **Opened**: EP-004
 - **Target Resolve**: EP-033
-- **Last Touched**: EP-024
+- **Last Touched**: EP-026
 - **Description**: 魔法体系にバグが存在すること自体が謎。ルクス教の教義では魔法は完全なはず。真相: 世界は組み込みシステム上のシミュレーションであり、数百年前の「大崩壊」（システムクラッシュ）以降、コードにバグが蓄積している。バグは自然発生ではなく、システム破損の結果。
 - **Progress Log**:
   - EP-004〜009: 初出〜段階的進展。マナスライム異常（overflow/NullRef, H1）→ loop_gain解析→エルダの森の共振パターン→「バグは局所的でない」認識→リンデン町の症状実証。詳細は canon/archive/ の各Canonエントリ参照
@@ -69,6 +69,7 @@
   - EP-020: 進展（確定）。帝都大聖堂地下の「pre-routing_table era」残留パターンを解析。バグの根が深い古い層から来ている可能性を認識（留保付き）。「READ_ONLY」により修正アクセス不可と確認
   - EP-023: 進展（確定）。routing_tableの上位スキーマ（foundation_layer）の端を確認。world_management_systemというモジュール名が出た。「バグの根が深い層にある」という認識の輪郭が出た。Last Touched: EP-020 → EP-023
   - EP-024: 進展（確定）。depth+1探索でBOUNDARY_LEAK（foundation_layer起源）を確認。「表層のrouting_table層バグ（配線の断線・接触不良）」と「foundation_layer起源のBOUNDARY_LEAK（基板そのものにひびが入っている）」が性質として異なることをアルが認識・言語化。「根の位置が違う」という認識。Last Touched: EP-023 → EP-024
+  - EP-026: 進展（確定）。structural_overview出力でrupture pointが確認され、基盤層の亀裂が大崩壊から数百年間修復されていないという認識が確立。「崩壊で破れた基盤層の亀裂がBOUNDARY_LEAKとして今も表面に滲み出している」という因果の言語化。Last Touched: EP-024 → EP-026
 
 ### LOOP-004: マーラの回復魔法の素養
 - **Status**: resolved
@@ -89,13 +90,14 @@
 - **Priority**: HIGH
 - **Opened**: EP-007
 - **Target Resolve**: EP-030
-- **Last Touched**: EP-024
+- **Last Touched**: EP-026
 - **Description**: 数百年前に起きた「大崩壊」とは何だったのか。村の古老は「世界が一瞬止まって、また動き出した」と語る（H3）。真相: メモリ破壊によるシステムクラッシュとリブート。このクラッシュがバグの根本原因。
 - **Progress Log**:
   - EP-007: 初出。エルダの森の大規模魔法異常の文脈でファラン爺の言い伝えとして初登場。H3「世界が一瞬止まった、というんだ。そして、また動き出した」を配置。アルは前世知識（クラッシュ＆リブート）と照合するが「飛躍が過ぎる」として結論を保留。Last Touched: EP-007
   - EP-020: 進展（確定）。学院閉架書庫の大崩壊年代記（「修復の記録——ルクス教東部管轄域」）に「修復は地の深いところから行われ、表層の安定はその後に続いた」という記述を発見した。大崩壊が自然災害のみではなく「深層と表層に渡る構造的な問題」だった可能性をアルが認識（「飛躍かもしれない」の留保付き）。クラウスが教義会議未承認の学術的解釈として「地の下に残った不整合」の存在に言及した。大崩壊年代記の原因記述が「諸説あり、明らかではない」のみで詳細記録が存在しない（記録できなかったか記録しなかったかは不明）。Last Touched: EP-007 → EP-020
   - EP-023: 進展（確定）。封印区画地下三階の内部が大崩壊以前の魔法陣（今もマナが流れている）で覆われていることを直接確認。mana_routingが「post_collapse_rebuild」バージョンであることが判明（大崩壊後に再構築されたことの示唆）。大崩壊の構造的痕跡に直接触れた最初のエピソードとして記録。Last Touched: EP-020 → EP-023
   - EP-024: 進展（確定）。collapse_epochという語の出現。foundation_layerの断片化パターンがsubsurface_boundary / depth_marker [collapse_epoch]に集中していることを確認。大崩壊の時代を位置として示している可能性をアルが認識（「確かめられたことではなかった」の留保付き）。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-023 → EP-024
+  - EP-026: 進展（確定）。structural_overview出力に「structural failure at collapse_epoch」という表現が出現。大崩壊が魔法体系の構造に不可逆な破損をもたらしたという認識が強化された。封印区画がrupture point（大崩壊時の構造破損による断裂点）であることが確定し、大崩壊の被害が物理的な構造に残存しているという理解が深まった。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-024 → EP-026
 
 ### LOOP-006: ドルクの古傷/過去
 - **Status**: resolved
@@ -126,6 +128,7 @@
   - EP-023: 進展（確定）。world_management_system・entity_registry等、EP-021より構造的なコード片が出力された。「ひとつのシステムの一部だった」という認識の強化（口に出さない・確信に至らない・断片的・INV-B03準拠）。Last Touched: EP-021 → EP-023
   - EP-024: 変化なし（EP-024では直接的進展なし。封印区画depth+1探索の内容はBOUNDARY_LEAK等foundation_layer系の新情報が中心であり、「コードに見える理由」への直接的接続は発生しなかった）
   - EP-025: 進展（確定）。EP-021〜024に収集した変数名10語の命名規則（動詞+名詞 / 名詞+名詞の統一スタイル・機能を説明できる長さ・機械的自動生成識別子との差異）を一覧化・比較した結果、「誰かが意図を持って書いた」という確信が「かもしれない」→「おそらく」の段階へ前進（断言なし・INV-B03準拠）。「前世の知識で名前を読みすぎている可能性」という留保を明示的に保持。SF的真相への到達なし（Target Resolve: EP-029）。Last Touched: EP-023 → EP-025
+  - EP-026: 進展（確定）。クラウスの学術的反応（「魔法体系の下に何か別の秩序がある仮説に対して方向性として整合する」）が「全体が一つの設計の産物（アーキテクチャ）である」という認識への進化を補強した（断言なし・INV-B03準拠）。「誰かが書いた（おそらく）」→「設計されたアーキテクチャ」という認識の深化として記録。SF的真相への到達なし（Target Resolve: EP-029）。Last Touched: EP-025 → EP-026
 
 ### LOOP-008: 魔法発動がブートシーケンスに似ている
 - **Status**: open
@@ -140,18 +143,20 @@
   - EP-018: 進展（確定）。帝都カエルム魔法学院中庭で三術者の同時発動を観察。デバッグ出力「magic_interference_analysis」にてphase[0] overlap（初期化シーケンスの衝突、平均遅延+0.04秒）を確認。EP-009でのリンデン広場の荷運び男の観察（ブートシーケンス類似の直感）が複数術者観察という形で再確認された。「認識→構築→発動」の三段階より前に「初期化段階（phase[0]）」が存在するという観察事実を得た（アルの認識は留保付き。RULE-M02の改訂は保留）。クラウスへの報告で「それを言葉にできる者は少ない」という評価を得た。SF的真相（魔法＝APIコール）への到達なし（INV-B03準拠）。Last Touched: EP-018
 
 ### LOOP-009: 帝都地下の封印区画
-- **Status**: open
+- **Status**: resolved
 - **Type**: world
 - **Priority**: MEDIUM
 - **Opened**: EP-015（確定）
 - **Target Resolve**: EP-026
-- **Last Touched**: EP-024
+- **Resolved EP**: EP-026
+- **Last Touched**: EP-026
 - **Description**: 帝都の地下に厳重に封印された区画が存在する。ルクス教が管理しており、「大崩壊の遺物」が安置されているとされる。真相: 封印区画はシステムの基盤レイヤーへの物理的なアクセスポイント。大崩壊（クラッシュ）時に露出したシステムの「穴」をルクス教（管理AIの代行者）が封印した。
 - **Progress Log**:
   - EP-015: 正式開始（確定）。大聖堂北翼廊下でアルのデバッグスキルが無意識に反応し、地下から微弱なノイズ（「低周波のうなりのような感覚」）を感知した。アルがベルントに問いかけ「大聖堂の地下には大崩壊時代の遺物が安置されている。聖職者でも立ち入りは制限されている」という間接的情報を得た。「敏感な術者には感じることがある、と聞いたことがあります」というベルントの発言も確定。「何かがある」という認識が生まれたが詳細は不明。Last Touched: EP-015
   - EP-020: 進展（確定）。EP-015で感知した地下ノイズを北翼回廊で再感知した。今回は「北翼の端・聖具室方向の地下」という方向を特定。研修内口頭申請の上でデバッグスキルを能動的に発動し、デバッグ出力「subsurface_resonance」を得た（「古いフォーマット・READ_ONLY」）。聖具室の木の扉を視認するまで到達。直接侵入なし。Last Touched: EP-015 → EP-020
   - EP-023: 大幅進展（確定）。ベルントの条件付き許可を得て封印区画地下三階に入室しデバッグスキルを発動。「deep_scan — foundation_layer」出力でworld_management_system・entity_registry等のモジュール名とEP-021変数名群の位置付けを確認。foundation_layerの構造断片を確認し「入口に立った」という認識を持つに至った。40MP消費（80/120）。Target Resolve EP-026に向けた大幅前進。Last Touched: EP-020 → EP-023
   - EP-024: 継続進展（確定）。2回目の入室・depth+1探索。[REDACTED]モジュールACCESS_DENIED（elevated_traceより高いクリアランスが必要）、foundation_layer integrity DEGRADED(34%)（前回スキャンが受動的診断を誘発）、BOUNDARY_LEAK（foundation_layer起源・city_grid内12地点に低レベルの影響）、collapse_epoch（断片化パターンの集中位置）を確認。38MP消費（63/120）。クラウスがBOUNDARY_LEAKについてベルントへ別途報告する方針。Last Touched: EP-023 → EP-024
+  - EP-026: **完全回収（resolved）**。3回目の入室・俯瞰モード（structural_overview）発動。`foundation_layer exposure node`（基盤層への露出点）・`rupture point`（大崩壊時の構造破損による断裂点）を確認。「封印区画は何かを閉じ込めているのではなく、崩壊によって開いた基盤層への穴を蓋している」という認識が確立。クラウスも「過去の複数の研究者が持っていた解釈と整合する」と評価。integrity 31%（前回34%から低下・加速）・入室頻度制限の勧告。22MP消費（98/120→76/120）。未解決の関連事項はLOOP-002/003/005に引き継ぎ。Status: open → resolved
 
 ### LOOP-010: フィンの監視任務
 - **Status**: resolved
