@@ -119,6 +119,17 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-013「母の手紙」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-013で新規 ACTIVE ループなし）
+- [x] 解決されたループのステータスが `resolved` に更新されている（LOOP-004: Status open → resolved。解決EP: EP-013。Progress Log に完全回収記録を追記済み）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-004: Last Touched → EP-013 に更新済み（resolved）。LOOP-003: Last Touched → EP-013 に更新済み。Progress Log に農地副作用5日で自然収束・経路流動的考察を追記済み。LOOP-010: Last Touched → EP-013 に更新済み。Progress Log にフィンが療養中も農地観察継続を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-004を削除し8件アクティブ表示: LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-010。LOOP-009は EP-015で正式配置予定のため表示対象外）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004はresolved）、quick_ref: 8件アクティブ表示。LOOP-004 resolved・LOOP-009未配置のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-013追加（canon-013）で実質active件数が7件（canon-007〜013）となるため、最古のcanon-007をarchiveに移動。canon/archive/canon-007.md を作成し、canon/active/canon-007.md をスタブに置き換え済み。移動後のactive実質件数: canon-008〜013 の6件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み。
+- [x] 同時アクティブ数確認: LOOP-004がresolvedになったためアクティブ数は9→8本（LOOP-009は未配置のため除外）。規定の上限（10本以下）を超過なし
+
+---
+
 ## 同期フロー
 
 ```
