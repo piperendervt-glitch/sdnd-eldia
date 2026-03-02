@@ -124,6 +124,21 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-020「地下のノイズ」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-020で新規 ACTIVE ループなし。LOOP-003・LOOP-005・LOOP-009は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-020で解決ループなし。アクティブ数8本維持）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-003: Last Touched EP-012 → EP-020 に更新済み。Progress Log に「EP-020: 進展（確定）。帝都大聖堂地下のpre-routing_table era残留パターンを解析。バグの根が深い古い層にある可能性認識。READ_ONLY確認」を追記済み（QA M-001対応）。LOOP-005: Last Touched EP-007 → EP-020 に更新済み。Progress Log に「EP-020: 進展（確定）。閉架書庫で『修復は地の深いところから行われた』記述を発見。大崩壊の構造的問題可能性を認識。クラウスが学術的解釈を言及」を追記済み（QA M-002対応）。LOOP-009: Last Touched EP-015 → EP-020 に更新済み。Progress Log に「EP-020: 進展（確定）。地下ノイズの方向特定（北翼の端・聖具室方向）。能動的解析でsubsurface_resonance出力取得。聖具室の木の扉を視認。直接侵入なし」を追記済み（QA M-003対応）。LOOP-010: Last Touched EP-019のまま維持。フィンの外面的反応は布石描写のみ（QA W-004対応。EP-018前例と同様の処理））
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-007・LOOP-008・LOOP-009・LOOP-010 の8件アクティブ表示。LOOP-003 Last Touched を EP-020・LOOP-005 Last Touched を EP-020・LOOP-009 Last Touched を EP-020 に更新済み（QA W-002対応）。LOOP-004 resolved・LOOP-006 resolved のため表示対象外）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006はresolved）、quick_ref: 8件アクティブ表示。LOOP-004・LOOP-006 resolved のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-020追加（canon-020）で実質active件数が6件（canon-015〜020）となるため、最古のcanon-015をarchiveに移動。canon/archive/canon-015.md を作成し、canon/active/canon-015.md をスタブに置き換え済み。移動後のactive実質件数: canon-016〜020 の5件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み
+- [x] 同時アクティブ数確認: EP-020でアクティブ数の変動なし（8本。LOOP-004・LOOP-006はresolved。規定の上限10本以下）
+- [x] M-001対応確認: LOOP-003 Last Touched を EP-012→EP-020 に更新。Progress Log に「EP-020: 進展（確定）」の項目を追記済み
+- [x] M-002対応確認: LOOP-005 Last Touched を EP-007→EP-020 に更新。Progress Log に「EP-020: 進展（確定）」の項目を追記済み
+- [x] M-003対応確認: LOOP-009 Last Touched を EP-015→EP-020 に更新。Progress Log に「EP-020: 進展（確定）」の項目を追記済み
+- [x] W-004対応確認: LOOP-010 Last Touched は EP-019のまま維持。canon-020.md のLOOP影響欄に「EP-020: 外面的布石（Last Touched EP-019のまま）」と明示記録済み
+
+---
+
 ## 同期フロー
 
 ```
