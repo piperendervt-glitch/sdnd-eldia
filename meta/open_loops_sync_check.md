@@ -111,6 +111,19 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-019「制度の重さ」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-019で新規 ACTIVE ループなし。LOOP-002・LOOP-010は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-019で解決ループなし。アクティブ数8本維持）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-002: Last Touched EP-016 → EP-019 に更新済み。Progress Log に「EP-019: 進展（確定）。ルクス教教義会議がデバッグスキルを正式に『教義異端』と認定。教義とデバッグスキルの前提が制度的に衝突する形で可視化」を追記済み。LOOP-010: Last Touched EP-015 → EP-019 に更新済み。Progress Log に「EP-019: 間接的因果（確定）。フィンの報告蓄積が異端認定に寄与。フィンの外面的動揺描写が読者への示唆として機能」を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-007・LOOP-008・LOOP-009・LOOP-010 の8件アクティブ表示。LOOP-002 Last Touched を EP-019・LOOP-010 Last Touched を EP-019 に更新済み。LOOP-004 resolved・LOOP-006 resolved のため表示対象外）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006はresolved）、quick_ref: 8件アクティブ表示。LOOP-004・LOOP-006 resolved のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-019追加（canon-019）で実質active件数が6件（canon-014〜019）となるため、最古のcanon-014をarchiveに移動。canon/archive/canon-014.md を作成し、canon/active/canon-014.md をスタブに置き換え済み。移動後のactive実質件数: canon-015〜019 の5件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み
+- [x] 同時アクティブ数確認: EP-019でアクティブ数の変動なし（8本。LOOP-004・LOOP-006はresolved。規定の上限10本以下）
+- [x] W-001対応確認: LOOP-002 Last Touched を EP-016→EP-019 に更新。Progress Log に「EP-019: 進展（確定）」の項目を追記済み
+- [x] W-002対応確認: LOOP-010 Last Touched を EP-015→EP-019 に更新。Progress Log に「EP-019: 間接的因果（確定）」の項目を追記済み
+
+---
+
 ## 同期フロー
 
 ```
