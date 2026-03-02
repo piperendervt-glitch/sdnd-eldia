@@ -81,6 +81,24 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-009「リンデンの門」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（LOOP-008: EP-009で初出、open_loops.md に既存・Last Touched を EP-009 に更新済み）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-009で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-003: Last Touched → EP-009 に更新済み。Progress Log に EP-009 進展内容を追記済み。LOOP-008: Last Touched → EP-009 に更新済み。Progress Log に EP-009 配置内容を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-004・LOOP-005・LOOP-006・LOOP-007・LOOP-008 の8件アクティブ表示）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件、quick_ref: LOOP-001〜008 の8件アクティブ表示。LOOP-009は EP-015予定・LOOP-010は EP-010予定として事前登録済み。整合）
+
+---
+
+<!-- EP-010「チームビルド」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（LOOP-010: EP-010で初出・配置完了。open_loops.md の Opened を「EP-010（確定）」に更新済み。Last Touched を EP-010 に更新済み）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-010で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-003: Last Touched → EP-010 に更新済み。Progress Log に EP-010 進展内容を追記済み。LOOP-010: Last Touched → EP-010 に更新済み。Progress Log に EP-010 配置完了内容を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-004・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-010 の9件アクティブ表示。LOOP-009は EP-015で正式配置予定のため表示対象外）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件、quick_ref: 9件アクティブ表示。LOOP-009は事前登録・未配置のため表示対象外。整合）
+
+---
+
 ## 同期フロー
 
 ```
