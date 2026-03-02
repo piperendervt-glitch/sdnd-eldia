@@ -181,6 +181,18 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-018「干渉の形」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-018で新規 ACTIVE ループなし。LOOP-008は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-018で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-008: Last Touched EP-009 → EP-018 に更新済み。Progress Log に「EP-018: 進展（確定）。帝都カエルム魔法学院中庭で三術者の同時発動を観察。phase[0] overlap確認」を追記済み。LOOP-010・LOOP-003 の Last Touched 変更なし（直接進展なし・間接布石のみ））
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-007・LOOP-008・LOOP-009・LOOP-010 の8件アクティブ表示。LOOP-008の Last Touched を EP-018 に更新済み。LOOP-004 resolved・LOOP-006 resolved のため表示対象外）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006はresolved）、quick_ref: 8件アクティブ表示。LOOP-004・LOOP-006 resolved のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-018追加（canon-018）で実質active件数が6件（canon-013〜018）となるため、最古のcanon-013をarchiveに移動。canon/archive/canon-013.md を作成し、canon/active/canon-013.md をスタブに置き換え済み。移動後のactive実質件数: canon-014〜018 の5件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み
+- [x] 同時アクティブ数確認: EP-018でアクティブ数の変動なし（8本。LOOP-004・LOOP-006はresolved。規定の上限10本以下）
+- [x] W-002対応確認: LOOP-008 Last Touched を EP-009→EP-018 に更新。Progress Log に「EP-018: 進展（確定）」の項目を追記済み
+
+---
+
 ## 同期フロー
 
 ```
