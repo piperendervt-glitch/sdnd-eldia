@@ -137,6 +137,20 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] M-003対応確認: LOOP-009 Last Touched を EP-015→EP-020 に更新。Progress Log に「EP-020: 進展（確定）」の項目を追記済み
 - [x] W-004対応確認: LOOP-010 Last Touched は EP-019のまま維持。canon-020.md のLOOP影響欄に「EP-020: 外面的布石（Last Touched EP-019のまま）」と明示記録済み
 
+<!-- EP-021「命名の重さ」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-021で新規 ACTIVE ループなし。LOOP-001・LOOP-007は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-021で解決ループなし。アクティブ数8本維持）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-001: Last Touched EP-015 → EP-021 に更新済み。Progress Log に「EP-021: 進展（確定）。古い実習室の深層トレースで soul_transfer_protocol・outsider_registry・consciousness_bridge という変数名を断片的に取得。召喚プロトコルの痕跡として読み得る名前が出た最初のエピソード」を追記済み（QA M-001対応）。LOOP-007: Last Touched EP-008 → EP-021 に更新済み。Progress Log に「EP-021: 進展（確定）。深層トレースで意図的な命名規則を持つ変数名群を発見。誰かが設計したシステムの一部だという直感を持ったが断片的データで確信には至らないとして保留」を追記済み（QA M-002対応: 「バグの痕跡」ではなく「古い層の残留データから意図的な命名規則を持つ変数名群を発見」という表現を採用）。LOOP-010: Last Touched EP-019のまま維持（QA W-001対応: 後述））
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-007・LOOP-008・LOOP-009・LOOP-010 の8件アクティブ表示。LOOP-001 Last Touched を EP-021・LOOP-007 Last Touched を EP-021 に更新済み。LOOP-004 resolved・LOOP-006 resolved のため表示対象外）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006はresolved）、quick_ref: 8件アクティブ表示。LOOP-004・LOOP-006 resolved のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-021追加（canon-021）で実質フルエントリactive件数が6件（canon-016〜021）となるため、最古のcanon-016をarchiveに移動。canon/archive/canon-016.md を作成し、canon/active/canon-016.md をスタブに置き換え済み。移動後のactive実質フルエントリ件数: canon-017〜021 の5件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み
+- [x] 同時アクティブ数確認: EP-021でアクティブ数の変動なし（8本。LOOP-004・LOOP-006はresolved。規定の上限10本以下）
+- [x] M-001対応確認: LOOP-001 Last Touched を EP-015→EP-021 に更新。Progress Log に「EP-021: 進展（確定）」の項目を追記済み
+- [x] M-002対応確認: LOOP-007 Last Touched を EP-008→EP-021 に更新。Progress Log に「EP-021: 進展（確定）」の項目を追記済み（「バグの痕跡」ではなく「古い層の残留データから意図的な命名規則を持つ変数名群を発見」という表現でQA M-002対応）
+- [x] W-001対応確認（QA W-001: LOOP-010の外面描写とopen_loops_sync_check.mdへの明示）: EP-021でフィンが「世界の外から来た集団という仮説がある」と触れた後で口ごもった描写あり（外面のみ・INV-B03準拠）。これはEP-020のW-004（フィンの外面反応→Last Touched変更なし）と同パターン。LOOP-010の本格進展はEP-022（告白）予定のため Last Touched は EP-019のまま維持。本エントリの明示記録をもってQA W-001対応済みとする
+- [x] W-002対応確認（QA W-002: deep_trace仕様化がpending）: EP-021で初登場した`deep_trace`出力タグは既存RULE-M08規定と矛盾しない「仕様の拡張事例」として処理。specs/reference/magic_physics.md の RULE-M08 へのサブ項目追記は canon-021.md 備考欄に「pending」として記録済み。当面の参照基準は canon-021.md の世界状態の変化欄（deep_trace比較表）とする
+- [x] W-003対応確認（QA W-003: PC-001 Location記述の混同防止）: canon-021.md の PC-001 変化欄に「Location: カエルム（翡翠の水差し亭 / 内環通行票取得済み）変化なし（宿泊地）。現在の活動場所: 魔法学院（研修中）」と区別を明示記録済み
+
 ---
 
 ## 同期フロー
