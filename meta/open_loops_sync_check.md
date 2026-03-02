@@ -67,6 +67,19 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] M-002対応: LOOP-002 Progress Log への EP-022 追記を「任意」ではなく確定記録として実施。open_loops.md に明示記録済み
 - [x] W-002対応: LOOP-010 resolved判定——宣言の確定（フィンの「もう報告はしない。叔父に自分の口で伝える」）をもって resolved と判定。次話でのベルントの実際の反応は新たな展開として記録する
 
+<!-- EP-023「禁域の入口」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-023で新規 ACTIVE ループなし。LOOP-001・003・005・007・009は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-023で解決ループなし。アクティブ数7本維持）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-009: EP-020→EP-023（大幅進展）。LOOP-003: EP-020→EP-023（進展）。LOOP-005: EP-020→EP-023（進展）。LOOP-007: EP-021→EP-023（進展）。LOOP-001: EP-021→EP-023（間接的進展）。LOOP-010: EP-022のまま維持（resolved後の追記のみ・Status変更なし））
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（7件アクティブ表示。LOOP-001・003・005・007・008・009のLast Touched更新済み。LOOP-010 resolved のため表示対象外。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006・LOOP-010はresolved）、quick_ref: 7件アクティブ表示。整合）
+- [x] activeウィンドウ管理: canon-023追加でactive実質件数が6件（canon-018〜023）となるため、最古の実体canon-018をarchiveに移動（スタブに置き換え）。archive/canon-018.md 作成済み。active実質件数: canon-019〜023 の5件
+- [x] 同時アクティブ数確認: EP-023でアクティブ数の変動なし（7本。規定の上限10本以下）
+- [x] W-001対応: LOOP-005 Progress Logの「EP-024: 進展予定。禁域の探索で大崩壊の痕跡に直接触れる」をEP-023実績に更新済み（大崩壊以前の魔法陣直接確認・mana_routing post_collapse_rebuild判明）
+- [x] W-002対応: NPC-006 Status欄の「リーラへの開示は未完了」をEP-023確定に合わせて削除・更新済み（characters_current.md 反映済み）
+- [x] M-001対応: canon-023備考欄にdeep_trace追加コスト可変の注記を追記済み（「対象の深度・データ品質によって可変。EP-021実績+7MP・EP-023実績+10MP」）
+- [x] Arc 2完結記録: canon-023備考欄にArc 2完結・EP-015〜023の9話構成・主要達成事項を明記済み
+
 ---
 
 ## 同期フロー
