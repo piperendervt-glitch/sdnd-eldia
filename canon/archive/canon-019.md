@@ -1,5 +1,6 @@
 # CANON-019: EP-019「制度の重さ」正史記録
 
+<!-- アーカイブ移動: 2026-03-03 / EP-024 Canon確定時 -->
 <!-- 確定日: 2026-03-03 -->
 <!-- QA判定: PASS（Blocker 0, Major 0, Minor 2, Warn 2） -->
 <!-- QAレポート: qa/reports/ep-019-qa.md -->
