@@ -80,6 +80,18 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] M-001対応: canon-023備考欄にdeep_trace追加コスト可変の注記を追記済み（「対象の深度・データ品質によって可変。EP-021実績+7MP・EP-023実績+10MP」）
 - [x] Arc 2完結記録: canon-023備考欄にArc 2完結・EP-015〜023の9話構成・主要達成事項を明記済み
 
+<!-- EP-024「底なしの階層」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-024で新規 ACTIVE ループなし。LOOP-009・LOOP-003・LOOP-005は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-024で解決ループなし。アクティブ数7本維持）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-009: EP-023→EP-024（継続進展）。LOOP-003: EP-023→EP-024（進展）。LOOP-005: EP-023→EP-024（進展）。LOOP-007・LOOP-008・LOOP-001: 変化なし。LOOP-007 Progress Log先読み記述を「EP-025: 進展予定（EP-024時点では進展なし）」に整理済み（W-002対応））
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（7件アクティブ表示。LOOP-009・LOOP-003・LOOP-005のLast TouchedをEP-024に更新済み。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006・LOOP-010はresolved）、quick_ref: 7件アクティブ表示。整合）
+- [x] activeウィンドウ管理: canon-024追加でactive実質件数が6件（canon-019〜024）となるため、最古のcanon-019をarchiveに移動（スタブに置き換え）。canon/archive/canon-019.md作成済み。active実質件数: canon-020〜024 の5件
+- [x] 同時アクティブ数確認: EP-024でアクティブ数の変動なし（7本。規定の上限10本以下）
+- [x] W-002対応: meta/open_loops.md LOOP-007 Progress Logの先読み記述「EP-025: 進展予定」を「EP-025: 進展予定（EP-024時点では進展なし）」に整理済み。また「EP-024: 変化なし」の記述を追記済み
+- [x] W-003対応: canon/active/のファイル数を確認（5件: canon-019〜023）してからcanon-024.mdを追加し、canon-019.mdをcanon/archive/に移動済み。active実質5件（canon-020〜024）に整理完了
+- [x] M-002対応: canon-024.md備考欄「MP計算の根拠と M-002 対応記録」にてRULE-M01との整合性を確認・記録済み
+
 ---
 
 ## 同期フロー
