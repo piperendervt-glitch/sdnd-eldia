@@ -1,6 +1,6 @@
 # Open Loops
 
-<!-- 最終更新: 2026-03-03 / EP-024 Canon確定: LOOP-009/003/005 Last Touched EP-024に更新。各Progress Log追記。LOOP-007 先読み記述「EP-025: 進展予定」を「EP-025: 進展予定（EP-024時点では進展なし）」に整理（W-002対応） -->
+<!-- 最終更新: 2026-03-03 / EP-025 Canon確定: LOOP-007 Last Touched EP-023→EP-025に更新。Progress Log追記。 -->
 <!-- canon/quick_ref.md のアクティブループ欄と常に同期すること -->
 <!-- LOOP-008〜010: Arc 2 開始準備として追加済み (2026-03-02) -->
 
@@ -14,7 +14,7 @@
 | LOOP-004 | resolved | character | MEDIUM | EP-006 | EP-013 | マーラの回復魔法の素養 |
 | LOOP-005 | open | world | HIGH | EP-007 | EP-030 | 大崩壊の真相（EP-024: collapse_epoch出現。foundation_layer断片化パターンが大崩壊の時代を示す可能性） |
 | LOOP-006 | resolved | character | MEDIUM | EP-002 | EP-017 | ドルクの古傷/過去 |
-| LOOP-007 | open | mystery | HIGH | EP-004 | EP-029 | デバッグ出力がコードに見える理由（EP-021: 意図的な命名規則を持つ変数名群を発見） |
+| LOOP-007 | open | mystery | HIGH | EP-004 | EP-029 | デバッグ出力がコードに見える理由（EP-025: 変数名命名規則の一貫性観察から「誰かが書いた」確信が「おそらく」へ前進） |
 | LOOP-008 | open | mystery | MEDIUM | EP-009 | EP-027 | 魔法発動がブートシーケンスに似ている（EP-009配置済み） |
 | LOOP-009 | open | world | MEDIUM | EP-015 | EP-026 | 帝都地下の封印区画（EP-024: 2回目入室・depth+1探索。BOUNDARY_LEAK・collapse_epoch・[REDACTED]ACCESS_DENIED確認） |
 | LOOP-010 | resolved | character | MEDIUM | EP-010（確定） | EP-022 | フィンの監視任務（EP-022: フィンがアルに監視任務の全容を告白し叔父との決別を宣言。完全回収） |
@@ -117,7 +117,7 @@
 - **Priority**: HIGH
 - **Opened**: EP-004
 - **Target Resolve**: EP-029
-- **Last Touched**: EP-023
+- **Last Touched**: EP-025
 - **Description**: アルのデバッグスキルが出力する情報は、変数名・スタックトレース・エラーメッセージなど、プログラミング的な形式を持つ。なぜ「魔法の世界」で「コード」が見えるのか。真相: 魔法体系が文字通りプログラムであり、デバッグスキルは基盤レイヤーへの低レベルアクセス権限だから。
 - **Progress Log**:
   - EP-004: 初出。デバッグ出力が前世のエラーログと同一フォーマット（変数名・アドレス・数値）で表示。アルは「前世の解釈か本物の形式か」を問うが答えなし。Last Touched: EP-004
@@ -125,7 +125,7 @@
   - EP-021: 進展（確定）。深層トレースで命名規則が自動生成と異なり意図的なもののように見えるという注記とともに意味のある名前群（soul_transfer_protocol・outsider_registry・consciousness_bridge）が出力された。「これは誰かが設計したシステムの一部だ」という直感をアルが持ったが、古い層の残留データから断片的にしか読めておらず確信には至らないとして保留。Last Touched: EP-008 → EP-021
   - EP-023: 進展（確定）。world_management_system・entity_registry等、EP-021より構造的なコード片が出力された。「ひとつのシステムの一部だった」という認識の強化（口に出さない・確信に至らない・断片的・INV-B03準拠）。Last Touched: EP-021 → EP-023
   - EP-024: 変化なし（EP-024では直接的進展なし。封印区画depth+1探索の内容はBOUNDARY_LEAK等foundation_layer系の新情報が中心であり、「コードに見える理由」への直接的接続は発生しなかった）
-  - EP-025: 進展予定（EP-024時点では進展なし）。「これは誰かが書いたコードだ」という確信
+  - EP-025: 進展（確定）。EP-021〜024に収集した変数名10語の命名規則（動詞+名詞 / 名詞+名詞の統一スタイル・機能を説明できる長さ・機械的自動生成識別子との差異）を一覧化・比較した結果、「誰かが意図を持って書いた」という確信が「かもしれない」→「おそらく」の段階へ前進（断言なし・INV-B03準拠）。「前世の知識で名前を読みすぎている可能性」という留保を明示的に保持。SF的真相への到達なし（Target Resolve: EP-029）。Last Touched: EP-023 → EP-025
 
 ### LOOP-008: 魔法発動がブートシーケンスに似ている
 - **Status**: open

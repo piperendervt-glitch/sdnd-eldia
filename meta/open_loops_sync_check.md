@@ -92,6 +92,18 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] W-003対応: canon/active/のファイル数を確認（5件: canon-019〜023）してからcanon-024.mdを追加し、canon-019.mdをcanon/archive/に移動済み。active実質5件（canon-020〜024）に整理完了
 - [x] M-002対応: canon-024.md備考欄「MP計算の根拠と M-002 対応記録」にてRULE-M01との整合性を確認・記録済み
 
+<!-- EP-025「変数の名前」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-025で新規 ACTIVE ループなし。LOOP-007は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-025で解決ループなし。アクティブ数7本維持）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-007: Last Touched EP-023→EP-025に更新済み。Progress Logに「EP-025: 進展（確定）。変数名命名規則の一貫性観察から『誰かが書いた』確信が『かもしれない』→『おそらく』へ前進（断言なし・INV-B03準拠）」を追記済み。LOOP-008: EP-025で発動なし・保留のためLast Touched EP-018のまま維持。LOOP-009: EP-025で直接の入室なし・間接的進展のみのためLast Touched EP-024のまま維持）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（7件アクティブ表示。LOOP-007 Last Touched を EP-025 に更新済み。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006・LOOP-010はresolved）、quick_ref: 7件アクティブ表示。整合）
+- [x] activeウィンドウ管理: canon-025追加でactive実質件数が6件（canon-020〜025）となるため、最古のcanon-020をarchiveに移動（スタブに置き換え）。canon/archive/canon-020.md作成済み。active実質件数: canon-021〜025 の5件
+- [x] 同時アクティブ数確認: EP-025でアクティブ数の変動なし（7本。規定の上限10本以下）
+- [x] QA M-002対応: open_loops.md LOOP-007 Last Touched EP-023→EP-025・Progress Log追記を実施済み（Canon登録時対応として完了）
+- [x] QA W-002対応: 変数名テーブルにおける「routing_tableがfoundation_layerの上に重なる表層管理層」という明示的表現をcanon-025確定情報テーブルに採用済み
+- [x] QA W-003対応: open_loops.md LOOP-007 Progress Logに「EP-025確定進展」を追記済み
+
 ---
 
 ## 同期フロー
