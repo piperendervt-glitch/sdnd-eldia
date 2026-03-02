@@ -153,6 +153,20 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-016「聖典の裏側」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-016で新規 ACTIVE ループなし。LOOP-002は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-016で解決ループなし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-002: Last Touched EP-003 → EP-016 に更新済み。Progress Log に「EP-016: 進展（確定）。古聖典第三章に修復表現三箇所を確認・教義との食い違い認識。H7配置」の内容を追記済み。LOOP-007: QA W-002対応により Last Touched 更新なし・EP-008のまま維持）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-009・LOOP-010 の9件アクティブ表示。LOOP-004 resolved のため表示対象外。EP-016でアクティブループ数に変更なし）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004はresolved）、quick_ref: 9件アクティブ表示。LOOP-004 resolved のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-016追加（canon-016）で実質active件数が7件（canon-010〜016）となるため、最古のcanon-010をarchiveに移動。canon/archive/canon-010.md を作成し、canon/active/canon-010.md をスタブに置き換え済み。移動後のactive実質件数: canon-011〜016 の6件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み
+- [x] 同時アクティブ数確認: EP-016でアクティブ数の変動なし（9本。LOOP-004はresolved。規定の上限10本以下）
+- [x] W-001対応確認: LOOP-002 Last Touched を EP-003→EP-016 に更新。Progress Log に「EP-016: 進展（確定）」の項目を追記済み
+- [x] W-002対応確認: LOOP-007 への Last Touched 更新なし（EP-008のまま維持）。canon-016.md のループ影響欄に対応理由を明記済み
+- [x] W-003対応確認: PC-001 MP を「75〜80/120」→「103〜108/120」に更新。specs/core/characters_current.md・canon/quick_ref.md の両方に反映済み。Status も「古聖典閲覧によるH7認識・LOOP-002深化」に更新済み
+
+---
+
 ## 同期フロー
 
 ```
