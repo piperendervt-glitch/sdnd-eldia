@@ -167,6 +167,20 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 
 ---
 
+<!-- EP-017「父の名前」Canon確定チェック / 実施日: 2026-03-02 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-017で新規 ACTIVE ループなし）
+- [x] 解決されたループのステータスが `resolved` に更新されている（LOOP-006: Status open → resolved。解決EP: EP-017。Progress Log に完全回収記録を追記済み）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-006: Last Touched EP-008 → EP-017 に更新済み（resolved）。他ループの Last Touched 変更なし（EP-017で他ループの進展なし））
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（quick_ref 更新後に確認済み。LOOP-006を削除し8件アクティブ表示: LOOP-001・LOOP-002・LOOP-003・LOOP-005・LOOP-007・LOOP-008・LOOP-009・LOOP-010。LOOP-004 resolved・LOOP-006 resolved のため表示対象外）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-004・LOOP-006はresolved）、quick_ref: 8件アクティブ表示。LOOP-004・LOOP-006 resolved のため表示対象外。整合）
+- [x] activeウィンドウ管理: EP-017追加（canon-017）で実質active件数が6件（canon-012〜017）となるため、最古のcanon-012をarchiveに移動。canon/archive/canon-012.md を作成し、canon/active/canon-012.md をスタブに置き換え済み。移動後のactive実質件数: canon-013〜017 の5件。管理基準（直近5話、6件以上で最古をarchive移動）に基づき適切に整理済み
+- [x] 同時アクティブ数確認: LOOP-006がresolvedになったためアクティブ数は9→8本（LOOP-004・LOOP-006はresolved。規定の上限10本以下）
+- [x] W-001対応確認: LOOP-006 Status を open→resolved・Last Touched を EP-008→EP-017 に更新。Progress Log に「EP-017: 完全回収（resolved）」の項目を追記済み
+- [x] W-002対応確認: canon-017.md の PC-001 MP記述を「約120/120（ほぼ上限・キャップ状態）」として記録。specs/core/characters_current.md・canon/quick_ref.md にも「約120/120」として反映済み
+- [x] W-003対応確認: EVT-017-01の記述を「リンデン支部からの持ち越し依頼記録の本部手続きを完了するためギルド本部を訪問」に修正して canon-017.md に記録済み
+
+---
+
 ## 同期フロー
 
 ```
