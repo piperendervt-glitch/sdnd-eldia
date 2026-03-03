@@ -179,6 +179,21 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] QA M-01対応: デバッガー2の召喚時期（collapse_epoch+147年）とパッチ最終記録（collapse_epoch+247）の100年差について、canon-031.md備考欄に「召喚後100年間活動してパッチを適用後に連絡途絶した」という補注を追記済み
 - [x] NPC-006フィン Status更新: ルクスの正体と教義の真相の告知受領完了を記録済み（characters_current.md更新済み）
 
+<!-- EP-032「パッチノート」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-032で新規 ACTIVE ループなし。LOOP-003は既存）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-032で解決ループなし。LOOP-003 resolvedはEP-033で行う。アクティブ数1本維持）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-003: Last Touched EP-030 → EP-032に更新済み。Progress Logに「EP-032: 最終進展（確定）。ルクスのパッチノート出力で因果チェーン完全確認・修正選択肢A/B/C明示・root_access条件確認・option B傾き確立。resolvedはEP-033」を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（1件アクティブ表示。LOOP-003 Last Touched を EP-032 に更新済み。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-001・LOOP-002・LOOP-004・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-009・LOOP-010はresolved）、quick_ref: 1件アクティブ表示（LOOP-003のみ）。整合）
+- [x] activeウィンドウ管理: canon-032追加でactive実質件数が6件（canon-027〜032）となるため、最古のcanon-027をarchiveに移動。canon/archive/canon-027.md作成済み（完全な内容を保持）。canon/active/canon-027.mdはリダイレクトマーカーに置き換え済み（削除ツール不可のため最小スタブに差し替え。実質的な内容はarchiveに移動済み）。active実質件数: canon-028〜032 の5件
+- [x] 同時アクティブ数確認: EP-032でアクティブ数の変動なし（1本。規定の上限10本以下）
+- [x] QA M-01対応: open_loops.md の LOOP-003「Last Touched」更新をCanon登録時に実施済み（EP-030 → EP-032・Progress Log追記済み）
+- [x] QA M-02対応: option A副作用の表現差異（plot_outline「魔法が消える」vs EP-032本文「魔法の仕組みが変わる」）をcanon-032.md備考欄に記録済み。EP-033以降での整合確認事項として引き継ぎ
+- [x] QA W-01対応: パッチノート内「INV-D02 equivalent confirmed」の表現はEP-033執筆前に判断事項として引き継ぎ記録済み
+- [x] QA W-02対応: BOUNDARY_LEAK露出ノード数変化なし（19か所）の処理は許容範囲として記録。EP-033以降で「EP-032時点で19か所・拡大継続中」を引き継ぐ
+- [x] QA W-03対応: integrity変化条件の仕様未定義をcanon-032.md備考欄に記録済み。EP-033以降でroot_access操作等が生じる際に整合説明が必要
+- [x] NPC-006フィン Status更新: 告知後の外出から帰還済みを記録済み（characters_current.md更新済み）
+
 ---
 
 ## 同期フロー

@@ -1,6 +1,6 @@
 # Open Loops
 
-<!-- 最終更新: 2026-03-03 / EP-031 Canon確定: LOOP-001 resolved。アクティブループ 2→1本。 -->
+<!-- 最終更新: 2026-03-03 / EP-032 Canon確定: LOOP-003 最終進展。アクティブループ 1本維持。 -->
 <!-- canon/quick_ref.md のアクティブループ欄と常に同期すること -->
 <!-- LOOP-008〜010: Arc 2 開始準備として追加済み (2026-03-02) -->
 
@@ -10,7 +10,7 @@
 |---------|--------|------|----------|--------|---------------|---------|
 | LOOP-001 | resolved | mystery | HIGH | EP-001 | EP-031 | なぜ転生したか（EP-031: soul_transfer_protocol選定基準・タイミング・前世の体の状態への全回答取得。完全解決） |
 | LOOP-002 | resolved | world | HIGH | EP-003 | EP-028 | ルクス教と魔法の真実（EP-028: 「祈りは`mana_routing`への呼び出し手順を言語で記述したもの」という認識が確立し resolved） |
-| LOOP-003 | open | mystery | HIGH | EP-004 | EP-033 | なぜバグがあるのか（EP-030: ルクス直接応答で因果チェーン最終確認。自己修復機能OFFLINE・root_access必要という修復要件再確認） |
+| LOOP-003 | open | mystery | HIGH | EP-004 | EP-033 | なぜバグがあるのか（EP-032: ルクスのパッチノート出力で「foundation_layer fracture: unrepaired / root cause of all derivative errors」が最終確認。修正選択肢A/B/C・root_access取得条件が開示された。最終進展済み。resolvedはEP-033） |
 | LOOP-004 | resolved | character | MEDIUM | EP-006 | EP-013 | マーラの回復魔法の素養 |
 | LOOP-005 | resolved | world | HIGH | EP-007 | EP-030 | 大崩壊の真相（EP-030: ルクス直接対話でメモリ破壊→クラッシュ→強制リブートという真相確定。LOOP-005 resolved） |
 | LOOP-006 | resolved | character | MEDIUM | EP-002 | EP-017 | ドルクの古傷/過去 |
@@ -64,7 +64,7 @@
 - **Priority**: HIGH
 - **Opened**: EP-004
 - **Target Resolve**: EP-033
-- **Last Touched**: EP-030
+- **Last Touched**: EP-032
 - **Description**: 魔法体系にバグが存在すること自体が謎。ルクス教の教義では魔法は完全なはず。真相: 世界は組み込みシステム上のシミュレーションであり、数百年前の「大崩壊」（システムクラッシュ）以降、コードにバグが蓄積している。バグは自然発生ではなく、システム破損の結果。
 - **Progress Log**:
   - EP-004〜009: 初出〜段階的進展。マナスライム異常（overflow/NullRef, H1）→ loop_gain解析→エルダの森の共振パターン→「バグは局所的でない」認識→リンデン町の症状実証。詳細は canon/archive/ の各Canonエントリ参照
@@ -78,6 +78,7 @@
   - EP-027: 関連進展（確定）。「`mana_routing`が大崩壊後に再構築されたバージョンである」という既存認識（EP-023確定）と「`mana_routing`が全術者の魔法発動の初期化を処理している」という新観察事実の接続。「基盤層のひびが`mana_routing`の処理に影響している可能性」をアルが内省した（断言なし・INV-B03準拠）。LOOP-008のresolved内容（`mana_routing`の発動初期化における応答主体としての機能確認）からLOOP-003への波及として記録。Last Touched: EP-026 → EP-027
   - EP-029: 進展（確定）。`routing_table`の破損が`foundation_layer`断裂を起源としBOUNDARY_LEAKを引き起こしているという因果チェーンをソースコード断片から直接確認。修正の二択（option A: 表層`routing_table`補修・一時的でfoundation_layer断裂を修復しない / option B: `foundation_layer`根本修復・`root_access`必要・システム全体への影響・不可逆）が出力に明示。`root_access`という修正要件の判明。アルの現在のアクセス権限は`read_only`（`root_access`なし）。この二択はEP-032/033の最終選択の前段として位置付けられる。Last Touched: EP-027 → EP-029
   - EP-030: 進展（確定）。supervisor_channel経由でルクス（lux_management_core）からの直接応答によって「クラッシュ→不完全リブート→foundation_layer断裂未修復→mana_routing再構築（容量低下）」という因果チェーンが最終確認された。自己修復機能OFFLINE・root_accessが根本修復に必要という修復要件を改めてルクスから明示的に確認。BOUNDARY_LEAK露出ノード12→19か所への拡大が継続中。「外部干渉（source: UNKNOWN）」という崩壊原因の詳細はEP-031以降に保留（INV-B03準拠）。Last Touched: EP-029 → EP-030
+  - EP-032: **最終進展（確定）**。supervisor_channel3回目接続・ルクスの「パッチノート」形式出力にてKNOWN ISSUESの最上位項目として「foundation_layer fracture: unrepaired / root cause of all derivative errors」が明示された。cascade_resonance・boundary_leak・routing_driftがすべてこの単一の構造的失敗から派生するという因果チェーンが完全確認された。RECOMMENDED ACTIONSとして修正選択肢A（完全修復・root_access必要・不可逆）/B（安定化パッチ・root_access必要・不可逆）/C（停止・不推奨）が明示。root_access取得条件＝「デバッガーによる意図の表明」（intent confirmation）のみが条件であることも確認。アルはoption B（安定化パッチ）への傾きを示した（最終確定はEP-033）。resolvedはEP-033（最終選択と同時）。Last Touched: EP-030 → EP-032
 
 ### LOOP-004: マーラの回復魔法の素養
 - **Status**: resolved
