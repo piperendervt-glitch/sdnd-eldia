@@ -3,6 +3,7 @@
 <!-- 確定日: 2026-03-03 -->
 <!-- QA判定: PASS (Blocker: 0, Major: 0, Minor: 2, Warn: 3) -->
 <!-- QAレポート: qa/reports/ep-030-qa.md -->
+<!-- アーカイブ移動日: 2026-03-03 / EP-035 Canon確定時 / active: canon-031〜035 の5件に整理 -->
 
 ## サマリー
 
