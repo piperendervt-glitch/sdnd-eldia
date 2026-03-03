@@ -126,6 +126,21 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] QA M-001対応: 本文（story/）への変更は writer 権限のため実施なし。canon-027.md 備考欄に「ユーザー指示による確定値採用」を明記済み
 - [x] QA M-002対応: INV-D01「一対象制約」の解釈根拠をcanon-027.md の不変ルール確認テーブル（INV-D01欄）に補足説明として追記済み（仕様変更不要・RULE-M08の既存解釈範囲内）
 
+<!-- EP-028「創世の言語」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-028で新規 ACTIVE ループなし。アクティブ数 変動前5本）
+- [x] 解決されたループのステータスが `resolved` に更新されている（LOOP-002: open → resolved。Resolved EP: EP-028。アクティブ数 5→4本）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-002: Last Touched EP-019 → EP-028（resolved）。LOOP-007: Last Touched EP-027 → EP-028（関連進展）。LOOP-005: Last Touched EP-026 → EP-028（関連進展）。LOOP-001/003: 変化なし）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（4件アクティブ表示。LOOP-002 resolved のため削除済み。LOOP-005 Last Touched を EP-028 に更新済み。LOOP-007 Last Touched を EP-028 に更新済み。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-002・LOOP-004・LOOP-006・LOOP-008・LOOP-009・LOOP-010はresolved）、quick_ref: 4件アクティブ表示。整合）
+- [x] activeウィンドウ管理: canon-028追加でactive実質件数が6件（canon-023〜028）となるため、最古のcanon-023をarchiveに移動（スタブに置き換え）。canon/archive/canon-023.md作成済み。active実質件数: canon-024〜028 の5件
+- [x] 同時アクティブ数確認: LOOP-002 resolved により 5→4本。規定の上限10本以下
+- [x] QA W-001対応: LOOP-002 resolved処理を完了（open_loops.md Status更新・Resolved EP記録・Last Touched更新・Progress Log追記済み。quick_ref.md LOOP-002削除済み。characters_current.md PC-001 Status更新済み）
+- [x] QA W-002対応: LOOP-007/LOOP-005 Last Touched更新とProgress Log追記を完了（open_loops.md更新済み）
+- [x] QA W-003対応: 大聖堂東翼図書室・南側奥の棚の木札「聖典・古記録」（EP-028初出）をcanon-028.md の世界状態の変化欄に記録済み
+- [x] QA M-001対応: ユーザー指示（MP消費15MP）を採用してEP-028終了時MPを64/120として確定。canon-028.md備考欄に「ユーザー指示による確定値採用」を明記済み。本文（story/）への変更はwriter権限のため実施なし
+- [x] QA M-002対応: INV-D01発動条件の整合性についてcanon-028.md 不変ルール確認テーブル（INV-D01欄）に補足説明を追記済み（仕様変更不要・Minor扱いPASS）
+- [x] H7回収記録: EP-016配置の布石（古聖典の古語がif-then文に見える）がEP-028で回収されたことをcanon-028.mdに明記済み
+
 ---
 
 ## 同期フロー
