@@ -6,7 +6,7 @@
 得られた知見をもとに新規スタートする。
 
 ## 現在のフェーズ
-Step 2: アーキテクチャ再設計（完了）
+Arc 2 完了（EP-023）。Arc 3（EP-024〜EP-035）執筆準備中。
 
 ## 参照すべきドキュメント
 
@@ -26,6 +26,7 @@ Step 2: アーキテクチャ再設計（完了）
 - canon/archive/*.md — 過去CANONエントリ
 
 ### ガイド・ポリシー
+- docs/writing_guide.md — **EP執筆手順ガイド（PM向け）**
 - specs/_index.md — スペック読み込み階層ガイド
 - docs/retrospective_resume.md — 前プロジェクトからの引き継ぎ知見
 - policies/canon_policy.md — Canon承認ゲートルール

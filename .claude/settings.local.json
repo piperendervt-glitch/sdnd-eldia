@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(rmdir:*)",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "WebSearch",
+      "WebFetch(domain:kakuyomu.jp)",
+      "Bash(wc:*)",
+      "Bash(ls -lh canon/active/*.md)",
+      "Bash(ls -lh story/arc*/ep-*.md)",
+      "Bash(sort -k1)",
+      "Bash(ls -lh qa/reports/*.md)",
+      "Bash(ls -lh .claude/agents/*.md)",
+      "Bash(ls:*)",
+      "Bash(find specs:*)",
+      "Bash(find:*)",
+      "Bash(bc)"
     ]
   }
 }
