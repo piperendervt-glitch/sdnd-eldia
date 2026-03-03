@@ -141,6 +141,19 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] QA M-002対応: INV-D01発動条件の整合性についてcanon-028.md 不変ルール確認テーブル（INV-D01欄）に補足説明を追記済み（仕様変更不要・Minor扱いPASS）
 - [x] H7回収記録: EP-016配置の布石（古聖典の古語がif-then文に見える）がEP-028で回収されたことをcanon-028.mdに明記済み
 
+<!-- EP-029「ソースコード」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-029で新規 ACTIVE ループなし。アクティブ数 変動前4本）
+- [x] 解決されたループのステータスが `resolved` に更新されている（LOOP-007: open → resolved。Resolved EP: EP-029。アクティブ数 4→3本）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-007: Last Touched EP-028 → EP-029（resolved）。LOOP-003: Last Touched EP-027 → EP-029（進展）。LOOP-005: Last Touched EP-028 → EP-029（進展）。LOOP-001: Last Touched EP-023のまま維持（直接的進展なし）。Progress Log に各進展を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（3件アクティブ表示。LOOP-007 resolved のため削除済み。LOOP-003 Last Touched を EP-029 に更新済み。LOOP-005 Last Touched を EP-029 に更新済み。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-002・LOOP-004・LOOP-006・LOOP-007・LOOP-008・LOOP-009・LOOP-010はresolved）、quick_ref: 3件アクティブ表示。整合）
+- [x] activeウィンドウ管理: canon-029追加でactive実質件数が6件（canon-024〜029）となるため、最古のcanon-024をarchiveに移動（スタブに置き換え）。canon/archive/canon-024.md作成済み。active実質件数: canon-025〜029 の5件
+- [x] 同時アクティブ数確認: LOOP-007 resolved により 4→3本。規定の上限10本以下
+- [x] QA M-001対応: canon-029.md 不変ルール確認テーブル（INV-D01欄）に「発動前の接続感触はRULE-M08補記の受動的感知漏れとして処理（MP消費は能動的発動コスト40MPに統合）」という補足説明を追記済み。本文変更は不要
+- [x] QA M-002対応: integrity値を31%→27%（4pt低下）として確定。PMの指示による確定値（EP-024: 6pt低下・EP-026: 3pt低下加速のパターンから4pt低下が自然）。characters_current.md・quick_ref.md・canon-029.md に反映済み
+- [x] QA W-001対応: LOOP-003/005 Last Touched更新とProgress Log追記を完了（open_loops.md更新済み）
+- [x] QA W-003対応: LOOP-007 resolved処理を完了（open_loops.md Status更新・Resolved EP記録・Last Touched更新・Progress Log追記済み。quick_ref.md LOOP-007削除済み。characters_current.md PC-001 Status更新済み）
+
 ---
 
 ## 同期フロー

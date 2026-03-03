@@ -1,6 +1,6 @@
 # Open Loops
 
-<!-- 最終更新: 2026-03-03 / EP-028 Canon確定: LOOP-002 resolved。LOOP-007/LOOP-005 Last Touched更新・Progress Log追記。 -->
+<!-- 最終更新: 2026-03-03 / EP-029 Canon確定: LOOP-007 resolved。LOOP-003/LOOP-005 Last Touched更新・Progress Log追記。 -->
 <!-- canon/quick_ref.md のアクティブループ欄と常に同期すること -->
 <!-- LOOP-008〜010: Arc 2 開始準備として追加済み (2026-03-02) -->
 
@@ -10,11 +10,11 @@
 |---------|--------|------|----------|--------|---------------|---------|
 | LOOP-001 | open | mystery | HIGH | EP-001 | EP-031 | なぜ転生したか（EP-023: 変数名群がentity_registryのsub-process等として位置付けられた） |
 | LOOP-002 | resolved | world | HIGH | EP-003 | EP-028 | ルクス教と魔法の真実（EP-028: 「祈りは`mana_routing`への呼び出し手順を言語で記述したもの」という認識が確立し resolved） |
-| LOOP-003 | open | mystery | HIGH | EP-004 | EP-033 | なぜバグがあるのか（EP-024: 「表層routing_table層バグ」と「foundation_layer起源BOUNDARY_LEAK」の質的違いをアルが言語化） |
+| LOOP-003 | open | mystery | HIGH | EP-004 | EP-033 | なぜバグがあるのか（EP-029: routing_table破損→foundation_layer断裂→BOUNDARY_LEAK因果チェーン確認。修正二択・root_access要件判明） |
 | LOOP-004 | resolved | character | MEDIUM | EP-006 | EP-013 | マーラの回復魔法の素養 |
-| LOOP-005 | open | world | HIGH | EP-007 | EP-030 | 大崩壊の真相（EP-028: 「大崩壊後にバグが入ったことで呼び出し手順の正常動作が失われた」という認識強化） |
+| LOOP-005 | open | world | HIGH | EP-007 | EP-030 | 大崩壊の真相（EP-029: `// last modified: collapse_epoch + 247`から大崩壊後247年後に誰かがworld_management_systemに修正を加えていた事実が判明） |
 | LOOP-006 | resolved | character | MEDIUM | EP-002 | EP-017 | ドルクの古傷/過去 |
-| LOOP-007 | open | mystery | HIGH | EP-004 | EP-029 | デバッグ出力がコードに見える理由（EP-028: 「ルクス教の祈り自体が呼び出し手順の言語的表現」という外部証拠が「設計されたアーキテクチャ」の認識を補強） |
+| LOOP-007 | resolved | mystery | HIGH | EP-004 | EP-029 | デバッグ出力がコードに見える理由（EP-029: 「魔法体系は文字通りプログラム・デバッグスキルはfoundation_layerへの低レベルアクセス権限」という確信に到達。resolved） |
 | LOOP-008 | resolved | mystery | MEDIUM | EP-009 | EP-027 | 魔法発動がブートシーケンスに似ている（EP-027: resolved。phase[0]-[3]構造とmana_routingの応答主体としての機能を複数術者・複数属性で確認） |
 | LOOP-009 | resolved | world | MEDIUM | EP-015 | EP-026 | 帝都地下の封印区画（EP-026: resolved。foundation_layer exposure node・rupture point確認。封印区画の正体が確立） |
 | LOOP-010 | resolved | character | MEDIUM | EP-010（確定） | EP-022 | フィンの監視任務（EP-022: フィンがアルに監視任務の全容を告白し叔父との決別を宣言。完全回収） |
@@ -61,7 +61,7 @@
 - **Priority**: HIGH
 - **Opened**: EP-004
 - **Target Resolve**: EP-033
-- **Last Touched**: EP-027
+- **Last Touched**: EP-029
 - **Description**: 魔法体系にバグが存在すること自体が謎。ルクス教の教義では魔法は完全なはず。真相: 世界は組み込みシステム上のシミュレーションであり、数百年前の「大崩壊」（システムクラッシュ）以降、コードにバグが蓄積している。バグは自然発生ではなく、システム破損の結果。
 - **Progress Log**:
   - EP-004〜009: 初出〜段階的進展。マナスライム異常（overflow/NullRef, H1）→ loop_gain解析→エルダの森の共振パターン→「バグは局所的でない」認識→リンデン町の症状実証。詳細は canon/archive/ の各Canonエントリ参照
@@ -73,6 +73,7 @@
   - EP-024: 進展（確定）。depth+1探索でBOUNDARY_LEAK（foundation_layer起源）を確認。「表層のrouting_table層バグ（配線の断線・接触不良）」と「foundation_layer起源のBOUNDARY_LEAK（基板そのものにひびが入っている）」が性質として異なることをアルが認識・言語化。「根の位置が違う」という認識。Last Touched: EP-023 → EP-024
   - EP-026: 進展（確定）。structural_overview出力でrupture pointが確認され、基盤層の亀裂が大崩壊から数百年間修復されていないという認識が確立。「崩壊で破れた基盤層の亀裂がBOUNDARY_LEAKとして今も表面に滲み出している」という因果の言語化。Last Touched: EP-024 → EP-026
   - EP-027: 関連進展（確定）。「`mana_routing`が大崩壊後に再構築されたバージョンである」という既存認識（EP-023確定）と「`mana_routing`が全術者の魔法発動の初期化を処理している」という新観察事実の接続。「基盤層のひびが`mana_routing`の処理に影響している可能性」をアルが内省した（断言なし・INV-B03準拠）。LOOP-008のresolved内容（`mana_routing`の発動初期化における応答主体としての機能確認）からLOOP-003への波及として記録。Last Touched: EP-026 → EP-027
+  - EP-029: 進展（確定）。`routing_table`の破損が`foundation_layer`断裂を起源としBOUNDARY_LEAKを引き起こしているという因果チェーンをソースコード断片から直接確認。修正の二択（option A: 表層`routing_table`補修・一時的でfoundation_layer断裂を修復しない / option B: `foundation_layer`根本修復・`root_access`必要・システム全体への影響・不可逆）が出力に明示。`root_access`という修正要件の判明。アルの現在のアクセス権限は`read_only`（`root_access`なし）。この二択はEP-032/033の最終選択の前段として位置付けられる。Last Touched: EP-027 → EP-029
 
 ### LOOP-004: マーラの回復魔法の素養
 - **Status**: resolved
@@ -93,7 +94,7 @@
 - **Priority**: HIGH
 - **Opened**: EP-007
 - **Target Resolve**: EP-030
-- **Last Touched**: EP-028
+- **Last Touched**: EP-029
 - **Description**: 数百年前に起きた「大崩壊」とは何だったのか。村の古老は「世界が一瞬止まって、また動き出した」と語る（H3）。真相: メモリ破壊によるシステムクラッシュとリブート。このクラッシュがバグの根本原因。
 - **Progress Log**:
   - EP-007: 初出。エルダの森の大規模魔法異常の文脈でファラン爺の言い伝えとして初登場。H3「世界が一瞬止まった、というんだ。そして、また動き出した」を配置。アルは前世知識（クラッシュ＆リブート）と照合するが「飛躍が過ぎる」として結論を保留。Last Touched: EP-007
@@ -102,6 +103,7 @@
   - EP-024: 進展（確定）。collapse_epochという語の出現。foundation_layerの断片化パターンがsubsurface_boundary / depth_marker [collapse_epoch]に集中していることを確認。大崩壊の時代を位置として示している可能性をアルが認識（「確かめられたことではなかった」の留保付き）。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-023 → EP-024
   - EP-026: 進展（確定）。structural_overview出力に「structural failure at collapse_epoch」という表現が出現。大崩壊が魔法体系の構造に不可逆な破損をもたらしたという認識が強化された。封印区画がrupture point（大崩壊時の構造破損による断裂点）であることが確定し、大崩壊の被害が物理的な構造に残存しているという理解が深まった。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-024 → EP-026
   - EP-028: 関連進展（確定）。「大崩壊後にバグが入ったことで呼び出し手順（祈り言語の三節構造）の正常動作が失われた」という認識の強化（LOOP-002 resolved内容との接続）。古聖典の「修復」表現（EP-016確認済み）との接続によって「崩壊前は正常に動いていた」という状態の対比が明確化。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-026 → EP-028
+  - EP-029: 進展（確定）。`// last modified: collapse_epoch + 247`という記述から、大崩壊後247年後に誰かが`world_management_system`に修正を加えていたという事実が判明。`// version: post_collapse_patch_v2.1`とcanon-023確定の`mana_routing: post_collapse_rebuild`が整合し、大崩壊後にシステム全体がパッチを当てられているという認識が深化。「大崩壊後にパッチが当てられたが根本の断裂は修復されていない」という認識の確立。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-028 → EP-029
 
 ### LOOP-006: ドルクの古傷/過去
 - **Status**: resolved
@@ -118,12 +120,13 @@
   - EP-017: **完全回収（resolved）**。ギルド本部の死亡報告書で「カイルが同行者を庇った」事実と父の語りとの齟齬をアル認識。ハルスト家遺族（妹）帝都在住情報も確認。父への伝達保留。詳細は canon/archive/canon-017.md 参照
 
 ### LOOP-007: デバッグ出力がコードに見える理由
-- **Status**: open
+- **Status**: resolved
 - **Type**: mystery
 - **Priority**: HIGH
 - **Opened**: EP-004
 - **Target Resolve**: EP-029
-- **Last Touched**: EP-028
+- **Resolved EP**: EP-029
+- **Last Touched**: EP-029
 - **Description**: アルのデバッグスキルが出力する情報は、変数名・スタックトレース・エラーメッセージなど、プログラミング的な形式を持つ。なぜ「魔法の世界」で「コード」が見えるのか。真相: 魔法体系が文字通りプログラムであり、デバッグスキルは基盤レイヤーへの低レベルアクセス権限だから。
 - **Progress Log**:
   - EP-004: 初出。デバッグ出力が前世のエラーログと同一フォーマット（変数名・アドレス・数値）で表示。アルは「前世の解釈か本物の形式か」を問うが答えなし。Last Touched: EP-004
@@ -135,6 +138,7 @@
   - EP-026: 進展（確定）。クラウスの学術的反応（「魔法体系の下に何か別の秩序がある仮説に対して方向性として整合する」）が「全体が一つの設計の産物（アーキテクチャ）である」という認識への進化を補強した（断言なし・INV-B03準拠）。「誰かが書いた（おそらく）」→「設計されたアーキテクチャ」という認識の深化として記録。SF的真相への到達なし（Target Resolve: EP-029）。Last Touched: EP-025 → EP-026
   - EP-027: 進展（確定）。フィンの「手順が定められているということは、それを定めた側がある」という論理展開をアルが受けた。「設計されたアーキテクチャ」の認識に、第二実習室での四属性同時観察での`mana_routing`との往復構造確認という実際の発動プロセスでの構造的証拠が加わった。断言なし・INV-B03準拠。SF的真相への到達なし（Target Resolve: EP-029）。Last Touched: EP-026 → EP-027
   - EP-028: 関連進展（確定）。「ルクス教の祈り自体が呼び出し手順の言語的表現である」という外部証拠（LOOP-002 resolved内容）が「設計されたアーキテクチャ」の認識を宗教的記録という別の角度から補強。「手順を定めた側がある」という認識が、宗教的文書の中にも同じ手順の痕跡が残っているという形で強化。断言なし・INV-B03準拠。SF的真相への到達なし（Target Resolve: EP-029）。Last Touched: EP-027 → EP-028
+  - EP-029: **完全回収（resolved）**。封印区画4回目入室で`foundation_layer source`から関数定義（`function initialize_region(region_id, attr_map)`）・条件分岐・コメント行（`// maintained by: [REDACTED]`・`// version: post_collapse_patch_v2.1`・`// last modified: collapse_epoch + 247`）・バージョン番号を含む完全なコード断片が出力された。「デバッグ出力がコードに見えるのは、それが文字通りコードだから」という確信に到達。「解釈の問題ではなかった」という認識の確立。EP-004「前世の解釈か本物の形式か」からEP-029「文字通りコードだから」まで25話分の積み上げで回収。Status: open → resolved。アクティブループ 4 → 3本（LOOP-001/003/005）
 
 ### LOOP-008: 魔法発動がブートシーケンスに似ている
 - **Status**: resolved
