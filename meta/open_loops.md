@@ -1,6 +1,6 @@
 # Open Loops
 
-<!-- 最終更新: 2026-03-03 / EP-030 Canon確定: LOOP-005 resolved。LOOP-001/LOOP-003 Last Touched更新・Progress Log追記。 -->
+<!-- 最終更新: 2026-03-03 / EP-031 Canon確定: LOOP-001 resolved。アクティブループ 2→1本。 -->
 <!-- canon/quick_ref.md のアクティブループ欄と常に同期すること -->
 <!-- LOOP-008〜010: Arc 2 開始準備として追加済み (2026-03-02) -->
 
@@ -8,7 +8,7 @@
 
 | Loop ID | Status | Type | Priority | Opened | Target Resolve | Summary |
 |---------|--------|------|----------|--------|---------------|---------|
-| LOOP-001 | open | mystery | HIGH | EP-001 | EP-031 | なぜ転生したか（EP-030: ルクスが「最後の希望として呼んだ」と明示・4人目のデバッガーであることが判明） |
+| LOOP-001 | resolved | mystery | HIGH | EP-001 | EP-031 | なぜ転生したか（EP-031: soul_transfer_protocol選定基準・タイミング・前世の体の状態への全回答取得。完全解決） |
 | LOOP-002 | resolved | world | HIGH | EP-003 | EP-028 | ルクス教と魔法の真実（EP-028: 「祈りは`mana_routing`への呼び出し手順を言語で記述したもの」という認識が確立し resolved） |
 | LOOP-003 | open | mystery | HIGH | EP-004 | EP-033 | なぜバグがあるのか（EP-030: ルクス直接応答で因果チェーン最終確認。自己修復機能OFFLINE・root_access必要という修復要件再確認） |
 | LOOP-004 | resolved | character | MEDIUM | EP-006 | EP-013 | マーラの回復魔法の素養 |
@@ -24,13 +24,14 @@
 ## 詳細
 
 ### LOOP-001: なぜ転生したか
-- **Status**: open
+- **Status**: resolved
 - **Type**: mystery
 - **Priority**: HIGH
 - **Opened**: EP-001
 - **Target Resolve**: EP-031
-- **Last Touched**: EP-030
-- **Description**: 主人公アル＝ラグナ（前世: 桐島晴人）はなぜこの世界に転生したのか。前世の最後の記憶は「残業中の意識喪失」——病気でも事故でもなく、痛みすらない。死因が存在しない。真相: システムが外部世界から信号処理の専門家の意識を引き抜いた例外処理。現実世界の肉体は昏睡状態（または死亡扱い）。EP-031 でルクス（管理AI）が真相を開示する。
+- **Resolved EP**: EP-031
+- **Last Touched**: EP-031
+- **Description**: 主人公アル＝ラグナ（前世: 桐島晴人）はなぜこの世界に転生したのか。前世の最後の記憶は「残業中の意識喪失」——病気でも事故でもなく、痛みすらない。死因が存在しない。真相: システムが外部世界から信号処理の専門家の意識を引き抜いた例外処理。現実世界の肉体は昏睡状態（status: unknown）。EP-031でルクス（管理AI）が真相を完全開示し resolved。
 - **Progress Log**:
   - EP-001: 初出。前世の「原因不明の死」を描写。読者には異世界転生の定番に見せる
   - EP-008: 確定。バグ修正成功の瞬間、アルの視界に英語のシステムメッセージ「System: patch_applied. Remaining errors: 6」（H5）が一瞬走った。「なぜ転生したか」に接続するシステムの存在が暗示された。SF的真相（システムが外部から信号処理専門家の意識を引き抜いた）は未開示。Last Touched: EP-008 に更新
@@ -39,6 +40,7 @@
   - EP-021: 進展（確定）。古い実習室の深層トレースで soul_transfer_protocol・outsider_registry・consciousness_bridge という変数名を断片的に取得。EP-015の異才者（Outsider）の記録との重なりをアルが内心で認識した（断言せず・INV-B03準拠）。転生の直接的な証拠にはならないが、システムの何らかの構造がこれらの概念を持つ可能性の痕跡として記録。「召喚プロトコルの痕跡」として読み得る名前が出た最初のエピソード。Last Touched: EP-015 → EP-021
   - EP-023: 間接的進展（確定）。foundation_layerのモジュールとしてEP-021の変数名群（soul_transfer_protocol・outsider_registry・consciousness_bridge）がentity_registryのサブプロセス・リンクテーブル・インターフェース層として位置付けられた。「転生の仕組みが大きなシステムの一部である」という示唆（断言せず・INV-B03準拠）。Last Touched: EP-021 → EP-023
   - EP-030: 進展（確定）。supervisor_channel経由でルクス（lux_management_core）から「あなたは私が呼んだ最後の希望です（you are the last hope I have summoned）」という直接的な言明を受領。outsider_registryに先行する3件のデバッガー記録が存在（最終記録: collapse_epoch+198年・全員INACTIVE）し、アルはcollapse_epoch+503年時点で4人目の登録デバッガーであることが判明。EP-015で確認した「異才者（Outsider）の記録」（魔法学院図書館の冊子）との対応が確定。「呼ばれた」という事実の認識確立。「なぜ前世の自分か」「なぜ今のタイミングか」「なぜ死のような形をとったのか」の詳細はEP-031まで保留（INV-B03準拠）。Last Touched: EP-023 → EP-030
+  - EP-031: **完全回収（resolved）**。supervisor_channel経由でルクスから選定基準・タイミング・前世の体の状態への全回答を取得。「なぜ前世の自分か」→foundation_layerの信号処理アーキテクチャへの適合（embedded systems engineer・signal processing specialistの意識が必要）。「なぜ今のタイミングか」→soul_transfer_protocol実行の最後の機会（integrity 32%での実行・現在26%で再召喚不可）。「なぜ死のような形か」→死んでいない、意識のみ引き込まれ体は昏睡中（body status: unknown）。前三人のデバッガー詳細も取得（デバッガー2が`mana_routing post_collapse_patch_v2.1`作成者と確定）。EP-001の「原因不明の死・痛みなし」伏線の完全回収。Status: open → resolved。アクティブループ 2→1本
 
 ### LOOP-002: ルクス教と魔法の真実
 - **Status**: resolved

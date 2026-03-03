@@ -166,6 +166,19 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] QA W-02対応: active ウィンドウ管理実施済み（canon-025をarchiveに移動・スタブなしで削除）
 - [x] QA W-03対応: specs/reference/magic_physics.md RULE-M08にsurface_bleed直接接触アクセス補記・supervisor_channel双方向通信補記を追加済み
 
+<!-- EP-031「例外ハンドラ」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-031で新規 ACTIVE ループなし。アクティブ数 変動前2本）
+- [x] 解決されたループのステータスが `resolved` に更新されている（LOOP-001: open → resolved。Resolved EP: EP-031。アクティブ数 2→1本）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-001: Last Touched EP-030 → EP-031（resolved）。LOOP-003: Last Touched EP-030のまま維持（EP-031での直接的進展なし）。Progress Log にEP-031の完全回収内容を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（1件アクティブ表示。LOOP-001 resolved のため削除済み。LOOP-003のみ残存（Last Touched EP-030）。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-001・LOOP-002・LOOP-004・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-009・LOOP-010はresolved）、quick_ref: 1件アクティブ表示。整合）
+- [x] activeウィンドウ管理: canon-031追加でactive実質件数が6件（canon-026〜031）となるため、最古のcanon-026をarchiveに移動。canon/archive/canon-026.md作成済み。canon/active/canon-026.md削除済み（スタブなし）。active実質件数: canon-027〜031 の5件
+- [x] 同時アクティブ数確認: LOOP-001 resolved により 2→1本。規定の上限10本以下
+- [x] QA W-02対応: soul_transfer_protocol実行条件（integrity 30%以上）を「EP-031確定」としてcanon-031.md世界状態の変化欄に明記済み
+- [x] QA W-03対応: LOOP-001 resolved処理を完了（open_loops.md Status更新・Resolved EP記録・Last Touched更新・Progress Log追記済み。quick_ref.md LOOP-001削除済み。characters_current.md PC-001 Status更新済み）
+- [x] QA M-01対応: デバッガー2の召喚時期（collapse_epoch+147年）とパッチ最終記録（collapse_epoch+247）の100年差について、canon-031.md備考欄に「召喚後100年間活動してパッチを適用後に連絡途絶した」という補注を追記済み
+- [x] NPC-006フィン Status更新: ルクスの正体と教義の真相の告知受領完了を記録済み（characters_current.md更新済み）
+
 ---
 
 ## 同期フロー
