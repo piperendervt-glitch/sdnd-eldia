@@ -102,6 +102,15 @@
   - 複数発振源が一体として作用している複合体（例: 七重フィードバックループ）は、全体の構造把握を目的とする解析フェーズでは一対象として扱うことができる
   - 修正フェーズでは修正を加える発振源ひとつを一対象として扱う（解析で全体構造を把握した上で、修正は単一要素のみに作用する）
   - この二段階処理（全体解析 → 単体修正）はINV-D01の「一対象制約」と整合する
+- **surface_bleed直接接触によるアクセス**（EP-030 初確認）:
+  - 地上に露出したBOUNDARY_LEAKの露出点（surface_bleed）に直接触れることで、封印区画への入室と同等のfoundation_layerへのアクセスが可能
+  - 条件: prior_registered debugger_accessのアクセストークン（prior_access_pattern）が必要
+  - BOUNDARY_LEAK拡大に伴いこのルートが新たに成立した（スキルレベルの向上ではなく世界側の変化による。INV-C01準拠）
+  - INV-D01の「対象の魔法現象を視認している状態」の接触による等価的適用として処理する
+- **supervisor_channel経由でのクエリ送信**（EP-030 初確認・QA W-03対応）:
+  - prior_registered debugger_accessのアクセストークンを持つアクセスに対して`world_management_system`の`supervisor_channel`が開放された場合、デバッグスキルの発動維持中に内部意図（思考内容）をクエリとして対象システムに送信することが可能
+  - これはlux_management_coreが準備したチャンネルへの双方向通信であり、デバッグスキル単独の能力拡張ではない（INV-C01の成長の段階性に違反しない）
+  - supervisor_channelはlux_management_coreとの直接テキスト対話を可能にする専用チャンネル
 
 ---
 

@@ -1,6 +1,6 @@
 # Open Loops
 
-<!-- 最終更新: 2026-03-03 / EP-029 Canon確定: LOOP-007 resolved。LOOP-003/LOOP-005 Last Touched更新・Progress Log追記。 -->
+<!-- 最終更新: 2026-03-03 / EP-030 Canon確定: LOOP-005 resolved。LOOP-001/LOOP-003 Last Touched更新・Progress Log追記。 -->
 <!-- canon/quick_ref.md のアクティブループ欄と常に同期すること -->
 <!-- LOOP-008〜010: Arc 2 開始準備として追加済み (2026-03-02) -->
 
@@ -8,11 +8,11 @@
 
 | Loop ID | Status | Type | Priority | Opened | Target Resolve | Summary |
 |---------|--------|------|----------|--------|---------------|---------|
-| LOOP-001 | open | mystery | HIGH | EP-001 | EP-031 | なぜ転生したか（EP-023: 変数名群がentity_registryのsub-process等として位置付けられた） |
+| LOOP-001 | open | mystery | HIGH | EP-001 | EP-031 | なぜ転生したか（EP-030: ルクスが「最後の希望として呼んだ」と明示・4人目のデバッガーであることが判明） |
 | LOOP-002 | resolved | world | HIGH | EP-003 | EP-028 | ルクス教と魔法の真実（EP-028: 「祈りは`mana_routing`への呼び出し手順を言語で記述したもの」という認識が確立し resolved） |
-| LOOP-003 | open | mystery | HIGH | EP-004 | EP-033 | なぜバグがあるのか（EP-029: routing_table破損→foundation_layer断裂→BOUNDARY_LEAK因果チェーン確認。修正二択・root_access要件判明） |
+| LOOP-003 | open | mystery | HIGH | EP-004 | EP-033 | なぜバグがあるのか（EP-030: ルクス直接応答で因果チェーン最終確認。自己修復機能OFFLINE・root_access必要という修復要件再確認） |
 | LOOP-004 | resolved | character | MEDIUM | EP-006 | EP-013 | マーラの回復魔法の素養 |
-| LOOP-005 | open | world | HIGH | EP-007 | EP-030 | 大崩壊の真相（EP-029: `// last modified: collapse_epoch + 247`から大崩壊後247年後に誰かがworld_management_systemに修正を加えていた事実が判明） |
+| LOOP-005 | resolved | world | HIGH | EP-007 | EP-030 | 大崩壊の真相（EP-030: ルクス直接対話でメモリ破壊→クラッシュ→強制リブートという真相確定。LOOP-005 resolved） |
 | LOOP-006 | resolved | character | MEDIUM | EP-002 | EP-017 | ドルクの古傷/過去 |
 | LOOP-007 | resolved | mystery | HIGH | EP-004 | EP-029 | デバッグ出力がコードに見える理由（EP-029: 「魔法体系は文字通りプログラム・デバッグスキルはfoundation_layerへの低レベルアクセス権限」という確信に到達。resolved） |
 | LOOP-008 | resolved | mystery | MEDIUM | EP-009 | EP-027 | 魔法発動がブートシーケンスに似ている（EP-027: resolved。phase[0]-[3]構造とmana_routingの応答主体としての機能を複数術者・複数属性で確認） |
@@ -29,7 +29,7 @@
 - **Priority**: HIGH
 - **Opened**: EP-001
 - **Target Resolve**: EP-031
-- **Last Touched**: EP-023
+- **Last Touched**: EP-030
 - **Description**: 主人公アル＝ラグナ（前世: 桐島晴人）はなぜこの世界に転生したのか。前世の最後の記憶は「残業中の意識喪失」——病気でも事故でもなく、痛みすらない。死因が存在しない。真相: システムが外部世界から信号処理の専門家の意識を引き抜いた例外処理。現実世界の肉体は昏睡状態（または死亡扱い）。EP-031 でルクス（管理AI）が真相を開示する。
 - **Progress Log**:
   - EP-001: 初出。前世の「原因不明の死」を描写。読者には異世界転生の定番に見せる
@@ -38,6 +38,7 @@
   - EP-015: 進展（確定）。魔法学院図書館の開架棚でフィンが偶然「異才者の記録——その記述と検証」という目録外の古い冊子を発見した。アルが読み、三人の「異才者（Outsider）」の記録（エーリヒ＝ヴァン・ミラン・テオ＝クラッセン）を確認。いずれも「突然現れ、やがて姿を消した」という共通点を持つ。アルが「自分と同じ境遇の存在が過去にもいたかもしれない」と認識し、「なぜ消えたのか」という新たな問いを持つに至った。転生との断言的結論は「かもしれない」の留保付きで保留（INV-B03準拠）。Last Touched: EP-015 に更新
   - EP-021: 進展（確定）。古い実習室の深層トレースで soul_transfer_protocol・outsider_registry・consciousness_bridge という変数名を断片的に取得。EP-015の異才者（Outsider）の記録との重なりをアルが内心で認識した（断言せず・INV-B03準拠）。転生の直接的な証拠にはならないが、システムの何らかの構造がこれらの概念を持つ可能性の痕跡として記録。「召喚プロトコルの痕跡」として読み得る名前が出た最初のエピソード。Last Touched: EP-015 → EP-021
   - EP-023: 間接的進展（確定）。foundation_layerのモジュールとしてEP-021の変数名群（soul_transfer_protocol・outsider_registry・consciousness_bridge）がentity_registryのサブプロセス・リンクテーブル・インターフェース層として位置付けられた。「転生の仕組みが大きなシステムの一部である」という示唆（断言せず・INV-B03準拠）。Last Touched: EP-021 → EP-023
+  - EP-030: 進展（確定）。supervisor_channel経由でルクス（lux_management_core）から「あなたは私が呼んだ最後の希望です（you are the last hope I have summoned）」という直接的な言明を受領。outsider_registryに先行する3件のデバッガー記録が存在（最終記録: collapse_epoch+198年・全員INACTIVE）し、アルはcollapse_epoch+503年時点で4人目の登録デバッガーであることが判明。EP-015で確認した「異才者（Outsider）の記録」（魔法学院図書館の冊子）との対応が確定。「呼ばれた」という事実の認識確立。「なぜ前世の自分か」「なぜ今のタイミングか」「なぜ死のような形をとったのか」の詳細はEP-031まで保留（INV-B03準拠）。Last Touched: EP-023 → EP-030
 
 ### LOOP-002: ルクス教と魔法の真実
 - **Status**: resolved
@@ -61,7 +62,7 @@
 - **Priority**: HIGH
 - **Opened**: EP-004
 - **Target Resolve**: EP-033
-- **Last Touched**: EP-029
+- **Last Touched**: EP-030
 - **Description**: 魔法体系にバグが存在すること自体が謎。ルクス教の教義では魔法は完全なはず。真相: 世界は組み込みシステム上のシミュレーションであり、数百年前の「大崩壊」（システムクラッシュ）以降、コードにバグが蓄積している。バグは自然発生ではなく、システム破損の結果。
 - **Progress Log**:
   - EP-004〜009: 初出〜段階的進展。マナスライム異常（overflow/NullRef, H1）→ loop_gain解析→エルダの森の共振パターン→「バグは局所的でない」認識→リンデン町の症状実証。詳細は canon/archive/ の各Canonエントリ参照
@@ -74,6 +75,7 @@
   - EP-026: 進展（確定）。structural_overview出力でrupture pointが確認され、基盤層の亀裂が大崩壊から数百年間修復されていないという認識が確立。「崩壊で破れた基盤層の亀裂がBOUNDARY_LEAKとして今も表面に滲み出している」という因果の言語化。Last Touched: EP-024 → EP-026
   - EP-027: 関連進展（確定）。「`mana_routing`が大崩壊後に再構築されたバージョンである」という既存認識（EP-023確定）と「`mana_routing`が全術者の魔法発動の初期化を処理している」という新観察事実の接続。「基盤層のひびが`mana_routing`の処理に影響している可能性」をアルが内省した（断言なし・INV-B03準拠）。LOOP-008のresolved内容（`mana_routing`の発動初期化における応答主体としての機能確認）からLOOP-003への波及として記録。Last Touched: EP-026 → EP-027
   - EP-029: 進展（確定）。`routing_table`の破損が`foundation_layer`断裂を起源としBOUNDARY_LEAKを引き起こしているという因果チェーンをソースコード断片から直接確認。修正の二択（option A: 表層`routing_table`補修・一時的でfoundation_layer断裂を修復しない / option B: `foundation_layer`根本修復・`root_access`必要・システム全体への影響・不可逆）が出力に明示。`root_access`という修正要件の判明。アルの現在のアクセス権限は`read_only`（`root_access`なし）。この二択はEP-032/033の最終選択の前段として位置付けられる。Last Touched: EP-027 → EP-029
+  - EP-030: 進展（確定）。supervisor_channel経由でルクス（lux_management_core）からの直接応答によって「クラッシュ→不完全リブート→foundation_layer断裂未修復→mana_routing再構築（容量低下）」という因果チェーンが最終確認された。自己修復機能OFFLINE・root_accessが根本修復に必要という修復要件を改めてルクスから明示的に確認。BOUNDARY_LEAK露出ノード12→19か所への拡大が継続中。「外部干渉（source: UNKNOWN）」という崩壊原因の詳細はEP-031以降に保留（INV-B03準拠）。Last Touched: EP-029 → EP-030
 
 ### LOOP-004: マーラの回復魔法の素養
 - **Status**: resolved
@@ -89,12 +91,13 @@
   - EP-013: **完全回収（resolved）**。マーラの手紙で素養を告白・村に残った理由・後悔はないと明示。アルのMP120の由来確定。詳細は canon/archive/canon-013.md 参照
 
 ### LOOP-005: 大崩壊の真相
-- **Status**: open
+- **Status**: resolved
 - **Type**: world
 - **Priority**: HIGH
 - **Opened**: EP-007
 - **Target Resolve**: EP-030
-- **Last Touched**: EP-029
+- **Resolved EP**: EP-030
+- **Last Touched**: EP-030
 - **Description**: 数百年前に起きた「大崩壊」とは何だったのか。村の古老は「世界が一瞬止まって、また動き出した」と語る（H3）。真相: メモリ破壊によるシステムクラッシュとリブート。このクラッシュがバグの根本原因。
 - **Progress Log**:
   - EP-007: 初出。エルダの森の大規模魔法異常の文脈でファラン爺の言い伝えとして初登場。H3「世界が一瞬止まった、というんだ。そして、また動き出した」を配置。アルは前世知識（クラッシュ＆リブート）と照合するが「飛躍が過ぎる」として結論を保留。Last Touched: EP-007
@@ -104,6 +107,7 @@
   - EP-026: 進展（確定）。structural_overview出力に「structural failure at collapse_epoch」という表現が出現。大崩壊が魔法体系の構造に不可逆な破損をもたらしたという認識が強化された。封印区画がrupture point（大崩壊時の構造破損による断裂点）であることが確定し、大崩壊の被害が物理的な構造に残存しているという理解が深まった。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-024 → EP-026
   - EP-028: 関連進展（確定）。「大崩壊後にバグが入ったことで呼び出し手順（祈り言語の三節構造）の正常動作が失われた」という認識の強化（LOOP-002 resolved内容との接続）。古聖典の「修復」表現（EP-016確認済み）との接続によって「崩壊前は正常に動いていた」という状態の対比が明確化。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-026 → EP-028
   - EP-029: 進展（確定）。`// last modified: collapse_epoch + 247`という記述から、大崩壊後247年後に誰かが`world_management_system`に修正を加えていたという事実が判明。`// version: post_collapse_patch_v2.1`とcanon-023確定の`mana_routing: post_collapse_rebuild`が整合し、大崩壊後にシステム全体がパッチを当てられているという認識が深化。「大崩壊後にパッチが当てられたが根本の断裂は修復されていない」という認識の確立。SF的真相への到達なし（INV-B03準拠）。Last Touched: EP-028 → EP-029
+  - EP-030: **完全回収（resolved）**。supervisor_channel経由でルクス（lux_management_core）から直接テキスト対話にて「collapse_epochはコアメモリ領域のメモリ破壊（cascade failure）によるシステムクラッシュと強制リブート」という真相が開示された。原因は「外部干渉（source: UNKNOWN）」。リブートは部分的（mana_routingはバージョン2として再構築・容量低下あり。foundation_layer断裂は未修復。自己修復機能はOFFLINE）。EP-007のファラン爺の言い伝え（H3）「世界が一瞬止まって、また動き出した」が完全回収。古聖典「修復した」表現（EP-016・EP-028）との接続確定。EP-029確定の`post_collapse_patch_v2.1`もリブート後の応急処置として整合。Status: open → resolved。Resolved EP: EP-030。アクティブループ 3 → 2本
 
 ### LOOP-006: ドルクの古傷/過去
 - **Status**: resolved
