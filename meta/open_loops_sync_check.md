@@ -154,6 +154,18 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] QA W-001対応: LOOP-003/005 Last Touched更新とProgress Log追記を完了（open_loops.md更新済み）
 - [x] QA W-003対応: LOOP-007 resolved処理を完了（open_loops.md Status更新・Resolved EP記録・Last Touched更新・Progress Log追記済み。quick_ref.md LOOP-007削除済み。characters_current.md PC-001 Status更新済み）
 
+<!-- EP-030「女神の名前」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-030で新規 ACTIVE ループなし。アクティブ数 変動前3本）
+- [x] 解決されたループのステータスが `resolved` に更新されている（LOOP-005: open → resolved。Resolved EP: EP-030。アクティブ数 3→2本）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-005: Last Touched EP-029 → EP-030（resolved）。LOOP-001: Last Touched EP-023 → EP-030（進展）。LOOP-003: Last Touched EP-029 → EP-030（進展）。Progress Log に各進展・解決を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（2件アクティブ表示。LOOP-005 resolved のため削除済み。LOOP-001 Last Touched を EP-030 に更新済み。LOOP-003 Last Touched を EP-030 に更新済み。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（うちLOOP-002・LOOP-004・LOOP-005・LOOP-006・LOOP-007・LOOP-008・LOOP-009・LOOP-010はresolved）、quick_ref: 2件アクティブ表示。整合）
+- [x] activeウィンドウ管理: canon-030追加でactive実質件数が6件（canon-025〜030）となるため、最古のcanon-025をarchiveに移動。canon/archive/canon-025.md作成済み。canon/active/canon-025.md削除済み（スタブなし）。active実質件数: canon-026〜030 の5件
+- [x] 同時アクティブ数確認: LOOP-005 resolved により 3→2本。規定の上限10本以下
+- [x] QA W-01対応: LOOP-005 resolved処理を完了（open_loops.md Status更新・Resolved EP記録・Last Touched更新・Progress Log追記済み。quick_ref.md LOOP-005削除済み。characters_current.md PC-001 Status更新済み）
+- [x] QA W-02対応: active ウィンドウ管理実施済み（canon-025をarchiveに移動・スタブなしで削除）
+- [x] QA W-03対応: specs/reference/magic_physics.md RULE-M08にsurface_bleed直接接触アクセス補記・supervisor_channel双方向通信補記を追加済み
+
 ---
 
 ## 同期フロー

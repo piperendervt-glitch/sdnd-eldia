@@ -3,6 +3,7 @@
 <!-- 確定日: 2026-03-03 -->
 <!-- QA判定: PASS -->
 <!-- QAレポート: qa/reports/ep-025-qa.md -->
+<!-- アーカイブ移動日: 2026-03-03 (EP-030 Canon登録時・active window管理) -->
 
 ## サマリー
 
@@ -57,7 +58,7 @@ EP-021〜024で収集した変数名10語の命名規則一覧（EP-025にて確
 | `soul_transfer_protocol` | サブプロセス | entity_registryのsub_process |
 | `outsider_registry` | テーブル | entity_registryのlinked_table |
 | `consciousness_bridge` | インターフェース層 | entity_registryのinterface_layer（access: DENIED） |
-| `foundation_layer` | 基盤層 | routing_tableの下位層（routing_tableがその上位に重なる） |
+| `foundation_layer` | 基盤層 | routing_tableの下位層（routing_tableがその上に重なる） |
 | `routing_table` | 管理層（表層） | foundation_layerの上に重なる表層管理層 |
 | `BOUNDARY_LEAK` | 異常種別 | foundation_layer起源の表層漏れ |
 | `collapse_epoch` | 深度マーカー | foundation_layer断片化パターンの集中位置 |
