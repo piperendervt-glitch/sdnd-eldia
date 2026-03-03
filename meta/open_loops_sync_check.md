@@ -208,6 +208,17 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] QA W-03対応: integrity変化条件の仕様未定義をcanon-032.md備考欄に記録済み。EP-033以降でroot_access操作等が生じる際に整合説明が必要
 - [x] NPC-006フィン Status更新: 告知後の外出から帰還済みを記録済み（characters_current.md更新済み）
 
+<!-- EP-034「リブート」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-034で新規 ACTIVE ループなし。アクティブループ 0本・変化なし）
+- [x] 解決されたループのステータスが `resolved` に更新されている（EP-034で解決ループなし。全LOOP 10/10 resolved（EP-033確定）のまま変化なし）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（全LOOP resolved・アクティブループ 0本のため更新対象なし）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（アクティブループ 0本。「全LOOP回収完了（10/10 resolved）」表示。変化なし。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（全件resolved）、quick_ref: アクティブ 0件（全LOOP回収完了）。変化なし。整合）
+- [x] activeウィンドウ管理: canon-034追加でactive実質件数が6件（canon-029〜034）となるため、最古のcanon-029をarchiveに移動。canon/archive/canon-029.md作成済み（完全な内容を保持）。canon/active/canon-029.mdはリダイレクトマーカーに置き換え済み。active実質件数: canon-030〜034 の5件
+- [x] 同時アクティブ数確認: EP-034でアクティブ数の変動なし（0本。規定の上限10本以下）
+- [x] QA M-01対応: 28MP消費内訳とRULE-M08基礎コストの関係——現状維持（選択肢2）を採用。本文の消耗描写が十分に機能している（膝をついた・意識保持ぎりぎり等）。canon-034.md備考欄「QA M-01対応記録」に記録済み
+- [x] QA W-01対応: INV-D01「一対象制約」の拡張解釈——「root_access権限付与後のsupervisor_channelセッション内での逐次write操作はINV-D01の一対象制約と整合する（一操作ごとに一対象）」という解釈をcanon-034.md備考欄「QA W-01対応記録」に確定記録として追記済み
+
 ---
 
 ## 同期フロー

@@ -1,6 +1,6 @@
 # Open Loops
 
-<!-- 最終更新: 2026-03-03 / EP-033 Canon確定: LOOP-003 完全回収（resolved）。アクティブループ 0本（全LOOP 10/10 回収完了）。 -->
+<!-- 最終更新: 2026-03-03 / EP-034 Canon確定: アクティブループ 0本（変化なし）。全LOOP 10/10 回収完了（EP-033確定）。primary node patch完了・degradation rate stabilizing。 -->
 <!-- canon/quick_ref.md のアクティブループ欄と常に同期すること -->
 <!-- LOOP-008〜010: Arc 2 開始準備として追加済み (2026-03-02) -->
 
