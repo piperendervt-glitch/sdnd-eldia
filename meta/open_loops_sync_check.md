@@ -179,6 +179,20 @@ Canon エントリを確定（`canon/active/` に追加）する前に、
 - [x] QA M-01対応: デバッガー2の召喚時期（collapse_epoch+147年）とパッチ最終記録（collapse_epoch+247）の100年差について、canon-031.md備考欄に「召喚後100年間活動してパッチを適用後に連絡途絶した」という補注を追記済み
 - [x] NPC-006フィン Status更新: ルクスの正体と教義の真相の告知受領完了を記録済み（characters_current.md更新済み）
 
+<!-- EP-033「設計判断」Canon確定チェック / 実施日: 2026-03-03 -->
+- [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-033で新規 ACTIVE ループなし。LOOP-003はEP-033でresolved）
+- [x] 解決されたループのステータスが `resolved` に更新されている（LOOP-003: open → resolved。Resolved EP: EP-033。アクティブ数 1→0本。全LOOP 10/10 resolved）
+- [x] 新エピソードで進展したループの `last_touched` が更新されている（LOOP-003: Last Touched EP-032 → EP-033（resolved）。Progress Log にEP-033完全回収内容を追記済み）
+- [x] `canon/quick_ref.md` のアクティブループ欄が `meta/open_loops.md` と一致している（アクティブループ 0本。「全LOOP回収完了（10/10 resolved）」表示。LOOP-003 resolved のためアクティブ欄から削除済み。整合）
+- [x] `meta/open_loops.md` のループ総数と `canon/quick_ref.md` の表示数が一致（open_loops.md: 10件（全件resolved）、quick_ref: アクティブ 0件（全LOOP回収完了）。整合）
+- [x] activeウィンドウ管理: canon-033追加でactive実質件数が6件（canon-028〜033）となるため、最古のcanon-028をarchiveに移動。canon/archive/canon-028.md作成済み（完全な内容を保持）。canon/active/canon-028.mdはリダイレクトマーカーに置き換え済み。active実質件数: canon-029〜033 の5件
+- [x] 同時アクティブ数確認: LOOP-003 resolved により 1→0本。全LOOP回収完了（10/10 resolved）。規定の上限10本以下
+- [x] QA W-01対応: LOOP-003 resolved処理を完了（open_loops.md Status更新・Resolved EP記録・Last Touched更新・Progress Log追記済み。quick_ref.md アクティブループ欄を「0本（全LOOP回収完了）」に更新済み。characters_current.md PC-001 Status更新済み）
+- [x] QA W-02対応: 全LOOP回収完了（10/10 resolved）を canon-033.md 備考欄「全LOOP回収完了（10/10 resolved）記録」テーブルで目視確認済み。open_loops.mdで全10件のstatus=resolvedを確認
+- [x] QA M-01対応: MP消費25MP・「普段より消耗が大きかった」描写は現状維持（選択肢3採用）。身体的疲労感の描写として読める範囲内と判断。canon-033.md備考欄「QA M-01対応記録」に記録済み
+
+---
+
 <!-- EP-032「パッチノート」Canon確定チェック / 実施日: 2026-03-03 -->
 - [x] 新エピソードで ACTIVE になったループが `meta/open_loops.md` に追加されている（EP-032で新規 ACTIVE ループなし。LOOP-003は既存）
 - [x] 解決されたループのステータスが `resolved` に更新されている（EP-032で解決ループなし。LOOP-003 resolvedはEP-033で行う。アクティブ数1本維持）
